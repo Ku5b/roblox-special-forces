@@ -9,16 +9,17 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            /* التدرج يبدأ بالأسود من الأعلى وينتهي بالأبيض في الأسفل */
-            background: linear-gradient(to bottom, #000000 50%, #ffffff 50%);
+            /* تدرج انسيابي ناعم من الأسود للأبيض */
+            background: linear-gradient(to bottom, #000000 30%, #1a1a1a 50%, #ffffff 100%);
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
         }
         .glass-card {
-            background: rgba(25, 25, 25, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -26,39 +27,39 @@
 
     <div class="relative z-10">
         <div class="max-w-4xl mx-auto text-center mt-12 mb-10">
-            <h1 class="text-4xl font-bold text-[#c5a059] mb-2 drop-shadow-lg">بوابة قوات الامن الخاصة</h1>
+            <h1 class="text-4xl font-bold text-[#c5a059] mb-2 drop-shadow-2xl">بوابة القوات الخاصة</h1>
             <p class="text-gray-400 font-medium">نظام الإدارة والتعاميم العسكرية</p>
         </div>
 
         <div class="max-w-md mx-auto space-y-4 mb-12">
-            <button class="w-full bg-[#c5a059] text-black font-bold py-4 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <button class="w-full bg-[#c5a059] text-black font-bold py-4 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300">
                 لوحة التحكم
             </button>
-            <button class="w-full bg-[#1e1e1e] text-white font-bold py-4 rounded-xl border border-white/10 shadow-xl hover:bg-black transition-colors duration-300">
+            <button class="w-full bg-black/50 text-white font-bold py-4 rounded-2xl border border-white/20 shadow-xl hover:bg-black transition-all">
                 آخر التعاميم
             </button>
         </div>
 
         <div class="grid grid-cols-2 gap-6 max-w-4xl mx-auto">
             
-            <a href="staff.html" class="glass-card p-10 rounded-3xl text-center shadow-2xl hover:border-[#c5a059] transition-all duration-300 active:scale-95 block">
+            <a href="staff.html" class="glass-card p-10 rounded-[2rem] text-center hover:border-[#c5a059]/50 transition-all duration-300 active:scale-95 block">
                 <div class="text-5xl mb-4">🛡️</div>
-                <div class="text-lg font-bold text-white tracking-wide">اعضاء القيادة</div>
+                <div class="text-lg font-bold text-white uppercase tracking-wider">اعضاء القيادة</div>
             </a>
 
-            <a href="https://docs.google.com/spreadsheets/d/12Cjtl5pJ_KyPbqyWIc5NE4ZvdMs3twd0ovHt0pciz9A/edit?usp=drivesdk" target="_blank" class="glass-card p-10 rounded-3xl text-center shadow-2xl hover:border-[#c5a059] transition-all duration-300 active:scale-95 block">
+            <a href="https://docs.google.com/spreadsheets/d/12Cjtl5pJ_KyPbqyWIc5NE4ZvdMs3twd0ovHt0pciz9A/edit?usp=drivesdk" target="_blank" class="glass-card p-10 rounded-[2rem] text-center hover:border-[#c5a059]/50 transition-all duration-300 active:scale-95 block">
                 <div class="text-5xl mb-4">🎖️</div>
-                <div class="text-lg font-bold text-white tracking-wide">اللائحة</div>
+                <div class="text-lg font-bold text-white uppercase tracking-wider">اللائحة</div>
             </a>
 
-            <div class="glass-card p-8 rounded-3xl text-center shadow-2xl col-span-2 hover:border-[#c5a059] transition-all">
+            <div class="glass-card p-8 rounded-[2rem] text-center col-span-2 hover:border-[#c5a059]/50 transition-all">
                 <div class="text-4xl mb-3">💬</div>
-                <div class="text-sm font-bold text-white">تقديم بلاغ</div>
+                <div class="text-sm font-bold text-white">تقديم بلاغ جديد</div>
             </div>
 
         </div>
 
-        <footer class="text-center text-black mt-20 pb-10 text-xs font-bold uppercase tracking-widest opacity-70">
+        <footer class="text-center text-black/60 mt-20 pb-10 text-xs font-black uppercase tracking-[0.2em]">
             Special Forces System • 2026
         </footer>
     </div>
