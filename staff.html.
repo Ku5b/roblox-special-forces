@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قيادة القوات الخاصة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Cairo', sans-serif; } </style>
+</head>
+<body class="bg-[#121212] text-white p-6">
+    <div class="max-w-3xl mx-auto">
+        <a href="index.html" class="text-[#c5a059] mb-6 block font-bold">❮ العودة للرئيسية</a>
+        <h1 class="text-3xl font-bold text-[#c5a059] mb-8 border-b border-[#c5a059] pb-4 text-center">قيادة القوات الخاصة</h1>
+        
+        <div class="grid grid-cols-1 gap-4">
+            <div class="bg-[#1e1e1e] p-5 rounded-lg border-r-8 border-[#c5a059] flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">سلطان التميمي </h2>
+                    <p class="text-[#c5a059] text-sm italic">القائد العام</p>
+                </div>
+                <div class="text-2xl">👑</div>
+            </div>
+
+            <div class="bg-[#1e1e1e] p-5 rounded-lg border-r-8 border-gray-400 flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">فراس الحربي </h2>
+                    <p class="text-gray-400 text-sm italic">نائب القائد</p>
+                </div>
+                <div class="text-2xl">🎖️</div>
+            </div>
+
+            <div class="bg-[#1e1e1e] p-5 rounded-lg border-r-8 border-blue-500 flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold">الاسم هنا</h2>
+                    <p class="text-blue-500 text-sm italic">مسؤول التدريب</p>
+                </div>
+                <div class="text-2xl">👮</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
