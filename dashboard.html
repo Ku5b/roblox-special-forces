@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | تشكيلات الكتائب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background: #0f0f0f;
+            color: white;
+        }
+        .section-card {
+            background: #1a1a1a;
+            border-right: 4px solid #c5a059;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        .unit-badge {
+            background: rgba(197, 160, 89, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .unit-badge:hover {
+            border-color: #c5a059;
+            background: rgba(197, 160, 89, 0.1);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="text-[#c5a059] mb-8 inline-block font-bold hover:underline transition">❮ العودة للبوابة الرئيسية</a>
+
+        <h1 class="text-3xl font-black text-[#c5a059] mb-10 border-b border-[#c5a059]/20 pb-6 flex items-center gap-3">
+            <span>📊</span> لوحة تحكم وتشكيلات القطاع
+        </h1>
+
+        <div class="section-card">
+            <h2 class="text-xl font-bold mb-3 text-[#c5a059] flex items-center gap-2">🛡️ تعريف القوات الخاصة</h2>
+            <p class="text-gray-300 leading-relaxed font-medium">
+                تعد القوات الخاصة الذراع الضارب والعمود الفقري للعمليات النوعية. نختص بالتدخل السريع، مكافحة الإرهاب، وحماية المكتسبات الوطنية تحت أقسى الظروف بمهارة قتالية لا تضاهى.
+            </p>
+        </div>
+
+        <div class="section-card">
+            <h2 class="text-xl font-bold mb-4 text-[#c5a059] flex items-center gap-2">🏆 السجل الميداني</h2>
+            <div class="space-y-3">
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                    <span class="text-[#c5a059]">✦</span>
+                    <p class="text-gray-300 text-sm">إتمام عمليات تأمين الحدود والمناطق الحيوية بنسبة نجاح 100%.</p>
+                </div>
+                <div class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                    <span class="text-[#c5a059]">✦</span>
+                    <p class="text-gray-300 text-sm">تحييد المخاطر في أكثر من 80 عملية مداهمة حضرية وصحراوية.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card border-r-4 border-red-600">
+            <h2 class="text-xl font-bold mb-6 text-red-500 flex items-center gap-2">⚡ كتائب القوات الخاصة (S.S.F)</h2>
+            <div class="grid grid-cols-1 gap-4">
+                
+                <div class="unit-badge border-r-4 border-red-500">
+                    <h3 class="font-black text-white text-lg">[ Bravo Battalion | S.S.F | كتيبة برافو]</h3>
+                    <p class="text-xs text-gray-400 mt-2 italic">قوة الإسناد والعمليات الخاصة التكتيكية</p>
+                </div>
+
+                <div class="unit-badge border-r-4 border-blue-500">
+                    <h3 class="font-black text-white text-lg">[ S.S.F | Delta Battalion | كتيبة دلتا]</h3>
+                    <p class="text-xs text-gray-400 mt-2 italic">وحدة التدخل السريع ومكافحة الإرهاب</p>
+                </div>
+
+                <div class="unit-badge border-r-4 border-green-500">
+                    <h3 class="font-black text-white text-lg">[ Alpha Battalion | S.S.F | كتيبة الفا ]</h3>
+                    <p class="text-xs text-gray-400 mt-2 italic">نخبة الاقتحام والسيطرة الميدانية</p>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="text-center text-gray-600 mt-12 pb-6 text-xs font-bold uppercase tracking-widest">
+            Special Forces Intelligence Division • 2026
+        </footer>
+    </div>
+
+</body>
+</html>
