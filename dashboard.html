@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم | الأخبار والكتائب</title>
+    <title>لوحة التحكم | القوات الخاصة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -11,35 +11,43 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            background: #000000; /* خلفية سوداء ملكية */
-            color: #FFFFFF; /* جميع الخطوط بيضاء */
+            background: #000000;
+            color: #FFFFFF;
             margin: 0;
             overflow-x: hidden;
         }
+
         .section-card {
             background: rgba(255, 255, 255, 0.05);
-            border-right: 4px solid #FFFFFF; /* خط جانبي أبيض */
+            border-right: 4px solid #FFFFFF;
             padding: 24px;
             border-radius: 16px;
             margin-bottom: 24px;
             backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
         }
-        .news-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 15px;
+
+        .section-card:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
         }
-        .news-item:last-child { border-bottom: none; }
-        
-        /* توحيد ألوان النصوص */
-        h1, h2, h3, p, span {
+
+        /* توحيد كل الخطوط للأبيض */
+        h1, h2, h3, p, span, i, li {
             color: #FFFFFF !important;
         }
 
+        .news-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 0;
+        }
+        .news-item:last-child { border-bottom: none; }
+
         .unit-badge {
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 10px;
             text-align: center;
         }
     </style>
@@ -47,59 +55,82 @@
 <body class="p-6">
 
     <div class="max-w-4xl mx-auto">
-        <div data-aos="fade-down">
-            <a href="index.html" class="text-white mb-8 inline-block font-bold opacity-80 hover:opacity-100 transition-opacity">❮ العودة للبوابة الرئيسية</a>
+        <div data-aos="fade-in">
+            <a href="index.html" class="mb-8 inline-block font-bold opacity-60 hover:opacity-100 transition-all">❮ العودة للبوابة الرئيسية</a>
         </div>
 
         <h1 data-aos="fade-left" class="text-3xl font-black mb-10 border-b border-white/20 pb-6 flex items-center gap-3">
-            <i class="fa-solid fa-chart-line"></i> لوحة تحكم القطاع
+            <i class="fa-solid fa-terminal"></i> لوحة تحكم القطاع
         </h1>
 
         <div class="section-card" data-aos="fade-up">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-newspaper"></i> آخر الأخبار والتحديثات
+                <i class="fa-solid fa-address-card"></i> تعريف القطاع
             </h2>
-            <div class="rounded-xl overflow-hidden bg-white/5">
-                <div class="news-item">
-                    <span class="text-xs font-black block mb-1">[ اليوم ]</span>
-                    <p class="text-sm font-medium">بدء دورة التدريب المتقدمة لكتيبة برافو في الميدان الشمالي.</p>
+            <p class="text-sm leading-relaxed opacity-90">
+                قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني. نرتكز على الانضباط العسكري الصارم والجاهزية التامة لمواجهة كافة التهديدات الأمنية بأحدث الأساليب والتقنيات الميدانية.
+            </p>
+        </div>
+
+        <div class="section-card" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-newspaper"></i> آخر المستجدات
+            </h2>
+            <div class="bg-white/5 rounded-xl p-2">
+                <div class="news-item px-3">
+                    <span class="text-xs font-black block">[ اليوم ]</span>
+                    <p class="text-sm">تفعيل أنظمة الرصد المبكر في المواقع الحيوية للقطاع.</p>
                 </div>
-                <div class="news-item">
-                    <span class="text-xs font-black block mb-1">[ أمس ]</span>
-                    <p class="text-sm font-medium">تم تحديث لوائح الانضباط العسكري؛ يرجى من الجميع المراجعة والالتزام.</p>
-                </div>
-                <div class="news-item">
-                    <span class="text-xs font-black block mb-1">[ تحديث ]</span>
-                    <p class="text-sm font-medium">اكتمال عمليات الصيانة الدورية لجميع العتاد والمعدات الميدانية.</p>
+                <div class="news-item px-3">
+                    <span class="text-xs font-black block">[ أمس ]</span>
+                    <p class="text-sm">صدور قائمة الترقيات السنوية للأفراد والضباط المتميزين.</p>
                 </div>
             </div>
         </div>
 
         <div class="section-card" data-aos="fade-up" data-aos-delay="200">
-            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-shield-halved"></i> كتائب القوات الخاصة
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-medal"></i> إنجازات القطاع
             </h2>
-            <div class="grid grid-cols-1 gap-3">
-                <div class="unit-badge">
-                    <h3 class="font-bold tracking-widest">[ Bravo Battalion | S.S.F ]</h3>
-                </div>
-                <div class="unit-badge">
-                    <h3 class="font-bold tracking-widest">[ Delta Battalion | S.S.F ]</h3>
-                </div>
-                <div class="unit-badge">
-                    <h3 class="font-bold tracking-widest">[ Alpha Battalion | S.S.F ]</h3>
-                </div>
+            <ul class="space-y-3 px-2">
+                <li class="flex items-start gap-2 text-sm">
+                    <i class="fa-solid fa-check-double mt-1 text-xs"></i>
+                    تأمين 100% من العمليات الموكلة للقطاع خلال الربع الحالي.
+                </li>
+                <li class="flex items-start gap-2 text-sm">
+                    <i class="fa-solid fa-check-double mt-1 text-xs"></i>
+                    تطوير أحدث ميدان تدريبي للعمليات الخاصة في المنطقة.
+                </li>
+                <li class="flex items-start gap-2 text-sm">
+                    <i class="fa-solid fa-check-double mt-1 text-xs"></i>
+                    تحقيق المركز الأول في دقة تنفيذ الاقتحامات الميدانية.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-card" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved"></i> تشكيلات الكتائب
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-bold">
+                <div class="unit-badge">[ Bravo Battalion ]</div>
+                <div class="unit-badge">[ Delta Battalion ]</div>
+                <div class="unit-badge">[ Alpha Battalion ]</div>
             </div>
         </div>
 
-        <footer class="text-center opacity-30 mt-12 pb-6 text-xs font-bold uppercase tracking-widest">
-            Special Forces Intelligence Division • 2026
+        <div class="flex justify-center mt-20 mb-10" data-aos="zoom-in-up">
+            <img src="logo.png" alt="شعار القوات" class="w-40 h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+        </div>
+
+        <footer class="text-center opacity-20 mt-10 pb-10 text-[10px] font-bold tracking-[0.3em]">
+            SYSTEM SECURED • 2026
         </footer>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 </html>
