@@ -11,16 +11,15 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            /* هذا هو التدرج اللي يخلي الصفحة من تحت أبيض شفاف */
-            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.9) 100%);
+            /* التدرج الأبيض الشفاف تحت */
+            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
-            overflow-x: hidden;
         }
 
         .section-card {
-            background: rgba(20, 20, 20, 0.8);
+            background: rgba(20, 20, 20, 0.85);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-right: 4px solid #FFFFFF;
@@ -29,15 +28,8 @@
             margin-bottom: 24px;
         }
 
-        /* توحيد كل الخطوط للأبيض */
         h1, h2, h3, p, span, i, li {
             color: #FFFFFF !important;
-        }
-
-        /* تنسيق خاص للأخبار */
-        .news-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 0;
         }
 
         .unit-badge {
@@ -46,11 +38,21 @@
             padding: 12px;
             border-radius: 10px;
             text-align: center;
+            font-weight: bold;
         }
         
-        /* حركة الشعار */
-        .logo-glow {
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+        /* تنسيق الشعار لضمان الظهور */
+        .logo-container {
+            width: 180px;
+            height: auto;
+            margin: 40px auto;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -69,60 +71,36 @@
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-address-card"></i> تعريف القطاع
             </h2>
-            <p class="text-sm leading-relaxed opacity-90 font-medium">
-                قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني. نرتكز على الانضباط العسكري الصارم والجاهزية التامة لمواجهة كافة التهديدات الأمنية.
-            </p>
-        </div>
-
-        <div class="section-card" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-newspaper"></i> آخر المستجدات
-            </h2>
-            <div class="bg-black/40 rounded-xl px-4 py-2">
-                <div class="news-item">
-                    <span class="text-xs font-black block">[ اليوم ]</span>
-                    <p class="text-sm">بدء دورة التدريب المتقدمة لكتيبة برافو في الميدان الشمالي.</p>
-                </div>
-                <div class="news-item">
-                    <span class="text-xs font-black block">[ أمس ]</span>
-                    <p class="text-sm">تم تحديث لوائح الانضباط العسكري؛ يرجى من الجميع المراجعة.</p>
-                </div>
-            </div>
+            <p class="text-sm opacity-90">نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني، نرتكز على الانضباط العسكري الصارم والجاهزية التامة.</p>
         </div>
 
         <div class="section-card" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-medal"></i> إنجازات القطاع
             </h2>
-            <ul class="space-y-3 px-2">
-                <li class="flex items-start gap-2 text-sm font-bold">
-                    <i class="fa-solid fa-check-circle mt-1"></i>
-                    تأمين 100% من العمليات الموكلة للقطاع خلال الربع الحالي.
-                </li>
-                <li class="flex items-start gap-2 text-sm font-bold">
-                    <i class="fa-solid fa-check-circle mt-1"></i>
-                    تحقيق المركز الأول في دقة تنفيذ الاقتحامات الميدانية.
-                </li>
+            <ul class="space-y-2 text-sm">
+                <li>● تنفيذ كافة العمليات الموكلة للقطاع بنجاح 100%.</li>
+                <li>● تحقيق المركز الأول في دقة تنفيذ الاقتحامات الميدانية.</li>
             </ul>
         </div>
 
         <div class="section-card" data-aos="fade-up" data-aos-delay="300">
-            <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-white">
-                <i class="fa-solid fa-shield-halved"></i> كتائب القوات الخاصة
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved"></i> تشكيلات الكتائب
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div class="unit-badge font-bold">[ Bravo Battalion ]</div>
-                <div class="unit-badge font-bold">[ Delta Battalion ]</div>
-                <div class="unit-badge font-bold">[ Alpha Battalion ]</div>
+                <div class="unit-badge">[ Bravo Battalion ]</div>
+                <div class="unit-badge">[ Delta Battalion ]</div>
+                <div class="unit-badge">[ Alpha Battalion ]</div>
             </div>
         </div>
 
-        <div class="flex justify-center mt-20 mb-10 pb-10" data-aos="zoom-in-up">
-            <img src="logo.png" alt="شعار القوات" class="w-48 h-auto logo-glow">
+        <div class="logo-container" data-aos="zoom-in-up">
+            <img src="https://ku5b.github.io/logo.png" alt="S.S.F Logo" onerror="this.src='https://i.ibb.co/Vp8L3n9/logo.png'">
         </div>
 
-        <footer class="text-center text-black font-black mt-10 pb-10 text-[10px] uppercase tracking-widest">
-            Special Forces Intelligence Division • 2026
+        <footer class="text-center text-black font-black mt-10 pb-10 text-[10px] tracking-widest">
+            SYSTEM SECURED • 2026
         </footer>
     </div>
 
