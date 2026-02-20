@@ -11,11 +11,12 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            /* التدرج الأبيض الشفاف تحت */
+            /* التدرج الذي يظهر البياض الشفاف في الأسفل */
             background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
+            overflow-x: hidden;
         }
 
         .section-card {
@@ -26,8 +27,10 @@
             padding: 24px;
             border-radius: 16px;
             margin-bottom: 24px;
+            transition: all 0.3s ease;
         }
 
+        /* توحيد كل الخطوط للون الأبيض */
         h1, h2, h3, p, span, i, li {
             color: #FFFFFF !important;
         }
@@ -40,27 +43,43 @@
             text-align: center;
             font-weight: bold;
         }
-        
-        /* تنسيق الشعار لضمان الظهور */
-        .logo-container {
-            width: 180px;
-            height: auto;
-            margin: 40px auto;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-        }
 
-        .logo-container img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .news-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 0;
+        }
+        .news-item:last-child { border-bottom: none; }
+
+        /* تنسيق زر العودة */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: #FFFFFF;
+            color: #000000 !important;
+        }
+        .back-btn:hover i {
+            color: #000000 !important;
         }
     </style>
 </head>
 <body class="p-6">
 
     <div class="max-w-4xl mx-auto relative z-10">
-        <div data-aos="fade-in">
-            <a href="index.html" class="mb-8 inline-block font-bold opacity-80 hover:opacity-100 transition-all">❮ العودة للبوابة الرئيسية</a>
+        
+        <div class="mb-10" data-aos="fade-down">
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                العودة للبوابة الرئيسية
+            </a>
         </div>
 
         <h1 data-aos="fade-left" class="text-3xl font-black mb-10 border-b border-white/20 pb-6 flex items-center gap-3">
@@ -71,20 +90,44 @@
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-address-card"></i> تعريف القطاع
             </h2>
-            <p class="text-sm opacity-90">نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني، نرتكز على الانضباط العسكري الصارم والجاهزية التامة.</p>
+            <p class="text-sm leading-relaxed opacity-90">
+                قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني. نرتكز على الانضباط العسكري الصارم والجاهزية التامة لمواجهة كافة التهديدات الأمنية.
+            </p>
+        </div>
+
+        <div class="section-card" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-newspaper"></i> آخر المستجدات
+            </h2>
+            <div class="bg-black/40 rounded-xl px-4 py-2">
+                <div class="news-item">
+                    <span class="text-xs font-black block">[ اليوم ]</span>
+                    <p class="text-sm font-medium">تفعيل أنظمة الرصد المبكر في المواقع الحيوية للقطاع.</p>
+                </div>
+                <div class="news-item">
+                    <span class="text-xs font-black block">[ أمس ]</span>
+                    <p class="text-sm font-medium">صدور قائمة الترقيات السنوية للأفراد والضباط المتميزين.</p>
+                </div>
+            </div>
         </div>
 
         <div class="section-card" data-aos="fade-up" data-aos-delay="200">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-medal"></i> إنجازات القطاع
             </h2>
-            <ul class="space-y-2 text-sm">
-                <li>● تنفيذ كافة العمليات الموكلة للقطاع بنجاح 100%.</li>
-                <li>● تحقيق المركز الأول في دقة تنفيذ الاقتحامات الميدانية.</li>
+            <ul class="space-y-3 px-2">
+                <li class="flex items-start gap-2 text-sm font-bold">
+                    <i class="fa-solid fa-check-double mt-1"></i>
+                    تأمين كافة العمليات الموكلة للقطاع بنجاح 100%.
+                </li>
+                <li class="flex items-start gap-2 text-sm font-bold">
+                    <i class="fa-solid fa-check-double mt-1"></i>
+                    تطوير أحدث ميدان تدريبي للعمليات الخاصة في المنطقة.
+                </li>
             </ul>
         </div>
 
-        <div class="section-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="section-card" data-aos="fade-up" data-aos-delay="300" style="margin-bottom: 100px;">
             <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
                 <i class="fa-solid fa-shield-halved"></i> تشكيلات الكتائب
             </h2>
@@ -95,11 +138,7 @@
             </div>
         </div>
 
-        <div class="logo-container" data-aos="zoom-in-up">
-            <img src="https://ku5b.github.io/logo.png" alt="S.S.F Logo" onerror="this.src='https://i.ibb.co/Vp8L3n9/logo.png'">
-        </div>
-
-        <footer class="text-center text-black font-black mt-10 pb-10 text-[10px] tracking-widest">
+        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest">
             SYSTEM SECURED • 2026
         </footer>
     </div>
