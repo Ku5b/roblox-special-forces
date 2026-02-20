@@ -28,7 +28,7 @@
             margin-bottom: 24px;
         }
 
-        /* توحيد كل النصوص للون الأبيض */
+        /* توحيد جميع النصوص والأيقونات للون الأبيض */
         h1, h2, h3, p, span, i, li, .back-btn {
             color: #FFFFFF !important;
         }
@@ -46,20 +46,26 @@
             text-decoration: none;
         }
 
-        /* عند تمرير الماوس يصبح الزر أبيض بالكامل والكتابة سوداء ليعطي تأثير تفاعلي */
         .back-btn:hover { 
             background: #FFFFFF; 
             color: #000000 !important; 
         }
-        .back-btn:hover i { 
-            color: #000000 !important; 
-        }
+        .back-btn:hover i { color: #000000 !important; }
 
         .news-item {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding: 12px 0;
         }
         .news-item:last-child { border-bottom: none; }
+
+        .unit-badge {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="p-6">
@@ -81,8 +87,8 @@
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-address-card"></i> تعريف القطاع
             </h2>
-            <p class="text-sm leading-relaxed opacity-90 font-medium">
-                قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني. نرتكز على الانضباط العسكري الصارم والجاهزية التامة لمواجهة كافة التهديدات الأمنية.
+            <p class="text-sm leading-relaxed opacity-90">
+                قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني. نرتكز على الانضباط العسكري الصارم والجاهزية التامة.
             </p>
         </div>
 
@@ -92,17 +98,44 @@
             </h2>
             <div class="bg-black/40 rounded-xl px-4 py-2">
                 <div class="news-item">
-                    <span class="text-xs font-black block text-white">[ اليوم ]</span>
+                    <span class="text-xs font-black block">[ اليوم ]</span>
                     <p class="text-sm">تفعيل أنظمة الرصد المبكر في المواقع الحيوية للقطاع.</p>
                 </div>
                 <div class="news-item">
-                    <span class="text-xs font-black block text-white">[ أمس ]</span>
+                    <span class="text-xs font-black block">[ أمس ]</span>
                     <p class="text-sm">صدور قائمة الترقيات السنوية للأفراد والضباط المتميزين.</p>
                 </div>
             </div>
         </div>
 
-        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest">
+        <div class="section-card" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-medal"></i> إنجازات القطاع
+            </h2>
+            <ul class="space-y-3 px-2">
+                <li class="flex items-start gap-2 text-sm font-bold">
+                    <i class="fa-solid fa-check-double mt-1"></i>
+                    تأمين كافة العمليات الموكلة للقطاع بنجاح 100%.
+                </li>
+                <li class="flex items-start gap-2 text-sm font-bold">
+                    <i class="fa-solid fa-check-double mt-1"></i>
+                    تطوير أحدث ميدان تدريبي للعمليات الخاصة في المنطقة.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-card" data-aos="fade-up" data-aos-delay="300" style="margin-bottom: 100px;">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved"></i> تشكيلات الكتائب
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="unit-badge">[ Bravo Battalion ]</div>
+                <div class="unit-badge">[ Delta Battalion ]</div>
+                <div class="unit-badge">[ Alpha Battalion ]</div>
+            </div>
+        </div>
+
+        <footer class="text-center text-black font-black mt-10 pb-10 text-[10px] tracking-widest">
             SYSTEM SECURED • 2026
         </footer>
     </div>
