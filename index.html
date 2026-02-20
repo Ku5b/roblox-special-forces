@@ -11,14 +11,15 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            background: linear-gradient(to bottom, #000000 20%, #0a0a0a 50%, #1a1a1a 100%);
+            /* رجعت لك التدرج الأبيض اللي من تحت */
+            background: linear-gradient(to bottom, #000000 30%, #1a1a1a 60%, #ffffff 100%);
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
             overflow-x: hidden;
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(20, 20, 20, 0.85);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
@@ -41,7 +42,7 @@
             <a href="dashboard.html" class="block w-full bg-white text-black text-center font-bold py-4 rounded-2xl shadow-xl hover:scale-105 transition-transform">
                 لوحة التحكم
             </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdz2ZHP75BYy0lbz0UfYAEVraHcT9MrMStKO5TGDyJspEM4RA/viewform?usp=sharing" target="_blank" class="block w-full bg-transparent text-white text-center font-bold py-4 rounded-2xl border border-white/40 shadow-xl hover:bg-white/10 transition-all">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdz2ZHP75BYy0lbz0UfYAEVraHcT9MrMStKO5TGDyJspEM4RA/viewform?usp=sharing" target="_blank" class="block w-full bg-black text-white text-center font-bold py-4 rounded-2xl border border-white/20 shadow-xl hover:bg-[#1a1a1a] transition-all">
                 تقديم بلاغ
             </a>
         </div>
@@ -51,7 +52,7 @@
                class="glass-card p-10 rounded-[2rem] text-center hover:border-white/50 active:scale-95 block"
                data-aos="fade-left" data-aos-delay="400">
                 <div class="text-5xl mb-4 icon-white">
-                    <i class="fa-solid fa-file-lines"></i>
+                    <i class="fa-solid fa-file-invoice"></i>
                 </div>
                 <div class="text-lg font-bold text-white tracking-wider">اللائحة</div>
             </a>
@@ -66,16 +67,16 @@
             </a>
         </div>
 
-        <div class="max-w-4xl mx-auto mt-32 glass-card p-8 rounded-[2.5rem] shadow-2xl mb-20" data-aos="fade-up">
-            <div class="flex items-center gap-4 mb-6 border-r-4 border-white pr-4">
-                <h2 class="text-2xl font-black text-white">تعريف القوات الخاصة</h2>
+        <div class="max-w-4xl mx-auto mt-32 bg-white/90 p-8 rounded-[2.5rem] shadow-2xl border border-gray-200 backdrop-blur-sm mb-20" data-aos="fade-up">
+            <div class="flex items-center gap-4 mb-6 border-r-4 border-black pr-4">
+                <h2 class="text-2xl font-black text-black">تعريف قوات الامن الخاصة</h2>
             </div>
-            <p class="text-gray-200 leading-relaxed font-medium">
+            <p class="text-gray-800 leading-relaxed font-medium">
                 نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب، والولاء المطلق للقيادة.
             </p>
         </div>
 
-        <footer class="text-center text-white/20 mt-10 pb-10 text-xs font-black uppercase tracking-[0.2em]">
+        <footer class="text-center text-black/60 mt-10 pb-10 text-xs font-black uppercase tracking-[0.2em]">
             Special Forces System • 2026
         </footer>
     </div>
