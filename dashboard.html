@@ -3,61 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم | القوات الخاصة</title>
+    <title>لوحة التحكم | S.S.F</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Cairo', sans-serif; 
-            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            color: white;
-        }
-        .section-card { background: rgba(20, 20, 20, 0.85); backdrop-filter: blur(12px); border-right: 4px solid #FFFFFF; padding: 24px; border-radius: 16px; margin-bottom: 24px; }
-        .back-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); padding: 10px 20px; border-radius: 12px; font-weight: bold; text-decoration: none; color: white !important; transition: 0.3s; }
-        .back-btn:hover { background: white; color: black !important; }
+        body { font-family: 'Cairo', sans-serif; background: #000; color: white; margin: 0; padding: 20px; }
         
-        /* تنسيق خانات الربط الجديدة */
-        .link-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.5) 100%);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 20px;
+        .back-link { 
+            background: #111; 
+            padding: 12px 20px; 
+            border-radius: 12px; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            text-decoration: none; 
+            color: white; 
+            font-weight: bold; 
+            margin-bottom: 25px;
+            float: left;
+        }
+
+        .page-title { font-size: 2.2rem; font-weight: 900; margin-bottom: 30px; margin-top: 10px; clear: both; }
+
+        /* تنسيق الخانات المستطيلة (الإنجازات وسجل الشرف) */
+        .action-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
             border-radius: 15px;
+            padding: 20px;
             margin-bottom: 15px;
             display: block;
+            text-decoration: none;
+            color: white;
             transition: 0.3s;
         }
-        .link-card:hover { transform: translateX(-5px); background: rgba(255,255,255,0.1); }
+
+        /* تنسيق الأقسام الأصلية (تعريف، مستجدات، كتائب) */
+        .section-box {
+            background: #0f0f0f;
+            border-radius: 20px;
+            border: 1px solid #1a1a1a;
+            border-right: 4px solid #fff;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .news-item { background: #080808; border-radius: 12px; padding: 15px; margin-top: 15px; }
+        .unit-item { background: #0f0f0f; border: 1px solid #222; padding: 15px; border-radius: 12px; text-align: center; font-weight: bold; margin-bottom: 10px; }
     </style>
 </head>
-<body class="p-6">
-    <div class="max-w-4xl mx-auto relative z-10">
-        <div class="mb-10"><a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-right"></i> العودة للبوابة الرئيسية</a></div>
+<body>
+    <div class="max-w-md mx-auto">
+        <a href="index.html" class="back-link">
+             <i class="fa-solid fa-arrow-right"></i>
+             <span>العودة للبوابة الرئيسية</span>
+        </a>
 
-        <h1 class="text-3xl font-black mb-10 border-b border-white/20 pb-6">لوحة تحكم القطاع</h1>
+        <h1 class="page-title">_\\ لوحة تحكم القطاع</h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            <a href="achievements.html" class="link-card" data-aos="fade-left">
-                <h3 class="font-black text-yellow-500"><i class="fa-solid fa-star"></i> إنجازات 2026</h3>
-                <p class="text-xs opacity-60">سجل العمليات والنجاحات الحالية</p>
-            </a>
-            <a href="legacy.html" class="link-card" data-aos="fade-left" data-aos-delay="100">
-                <h3 class="font-black text-white"><i class="fa-solid fa-crown"></i> سجل القادة الذهبي</h3>
-                <p class="text-xs opacity-60">تاريخ القادة </p>
-            </a>
+        <hr class="border-zinc-800 mb-8">
+
+        <a href="achievements.html" class="action-card">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="font-black text-yellow-500 text-lg"><i class="fa-solid fa-star ml-1"></i> إنجازات 2026</h3>
+                    <p class="text-xs opacity-50">سجل العمليات والنجاحات الحالية</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="legacy.html" class="action-card">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="font-black text-white text-lg"><i class="fa-solid fa-crown ml-1"></i> سجل القادة الذهبي</h3>
+                    <p class="text-xs opacity-50">تاريخ القادة</p>
+                </div>
+            </div>
+        </a>
+
+        <div class="section-box">
+            <h2 class="text-xl font-black mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-address-card"></i> تعريف القطاع
+            </h2>
+            <p class="text-sm opacity-70 leading-relaxed font-bold">
+                قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني. نرتكز على الانضباط العسكري الصارم والجاهزية التامة لمواجهة كافة التهديدات الأمنية.
+            </p>
         </div>
 
-        <div class="section-card" data-aos="fade-up">
-            <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-address-card"></i> تعريف القطاع</h2>
-            <p class="text-sm opacity-90">قوات الأمن الخاصة هي وحدة نخبة مخصصة للعمليات النوعية وحماية الأمن الوطني.</p>
+        <div class="section-box">
+            <h2 class="text-xl font-black flex items-center gap-2">
+                <i class="fa-solid fa-newspaper"></i> آخر المستجدات
+            </h2>
+            <div class="news-item text-sm space-y-4">
+                <div>
+                    <span class="text-xs font-black block text-gray-500 mb-1">[ اليوم ]</span>
+                    تفعيل أنظمة الرصد المبكر في المواقع الحيوية للقطاع.
+                </div>
+                <hr class="border-zinc-900">
+                <div>
+                    <span class="text-xs font-black block text-gray-500 mb-1">[ أمس ]</span>
+                    تأجيل زيارة قوات الامن الخاصة.
+                </div>
+            </div>
         </div>
 
-        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest">SYSTEM SECURED • 2026</footer>
+        <div class="section-box">
+            <h2 class="text-xl font-black mb-5 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved"></i> تشكيلات الكتائب
+            </h2>
+            <div class="unit-item">[ Bravo Battalion ]</div>
+            <div class="unit-item">[ Delta Battalion ]</div>
+            <div class="unit-item">[ Alpha Battalion ]</div>
+        </div>
+
+        <footer class="text-center mt-12 pb-10 opacity-30 text-[10px] font-black tracking-widest">
+            SYSTEM SECURED • 2026
+        </footer>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
