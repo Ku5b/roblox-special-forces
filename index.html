@@ -24,22 +24,23 @@
             width: 100%;
             max-width: 400px;
             padding: 20px;
-            padding-top: 40px;
+            padding-top: 50px;
         }
 
-        /* العنوان العلوي الجديد */
-        .portal-header {
+        /* العنوان العلوي المطلوبة */
+        .portal-main-title {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
-        .portal-header h1 {
-            font-size: 1.2rem;
+        .portal-main-title h1 {
+            font-size: 1.5rem;
             font-weight: 900;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 10px;
-            display: inline-block;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(255,255,255,0.2);
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+            display: block;
+            width: 100%;
         }
 
         /* الأزرار المستطيلة */
@@ -69,7 +70,7 @@
             margin-bottom: 25px;
         }
 
-        /* شبكة المربعات الأربعة */
+        /* شبكة المربعات */
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -128,7 +129,7 @@
 <body>
 
     <div class="container">
-        <div class="portal-header">
+        <div class="portal-main-title">
             <h1>بوابة قوات الأمن الخاصة</h1>
         </div>
 
@@ -136,7 +137,7 @@
         <a href="#" class="btn-sub">تقديم بلاغ</a>
 
         <div class="grid-container">
-            <a href="rules.html" class="card">
+            <a href="https://docs.google.com/spreadsheets/d/12Cjtl5pJ_KyPbqyWIc5NE4ZvdMs3twd0ovHt0pciz9A/edit?usp=drivesdk" target="_blank" class="card">
                 <i class="fa-solid fa-file-lines text-white"></i>
                 <span>اللائحة</span>
             </a>
