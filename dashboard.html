@@ -28,9 +28,27 @@
             margin-bottom: 24px;
         }
 
-        /* توحيد جميع النصوص والأيقونات للون الأبيض */
         h1, h2, h3, p, span, i, li, .back-btn {
             color: #FFFFFF !important;
+        }
+
+        /* تنسيق الخانة الجديدة */
+        .achievement-link-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(20, 20, 20, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 4px solid #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            display: block;
+            transition: 0.4s all ease;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+
+        .achievement-link-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
 
         .back-btn {
@@ -82,6 +100,18 @@
         <h1 data-aos="fade-left" class="text-3xl font-black mb-10 border-b border-white/20 pb-6">
             لوحة تحكم القطاع
         </h1>
+
+        <a href="achievements.html" class="achievement-link-card" data-aos="zoom-in">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-black flex items-center gap-3">
+                        <i class="fa-solid fa-star text-yellow-400"></i> إنجازات القطاع لعام 2026
+                    </h2>
+                    <p class="text-sm opacity-70 mt-1 italic">اضغط هنا لمشاهدة سجل الشرف والعمليات الميدانية</p>
+                </div>
+                <i class="fa-solid fa-chevron-left opacity-50"></i>
+            </div>
+        </a>
 
         <div class="section-card" data-aos="fade-up">
             <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
