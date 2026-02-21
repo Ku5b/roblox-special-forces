@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل الشرف والقيادة | القوات الخاصة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .leader-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 5px solid #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            transition: 0.4s;
+        }
+
+        .leader-card:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .current-tag {
+            background: #ffd700;
+            color: black;
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white !important;
+        }
+
+        .back-btn:hover { background: white; color: black !important; }
+
+        .timeline-line {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-3xl mx-auto relative z-10">
+        
+        <div class="mb-12" data-aos="fade-down">
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                العودة للبوابة الرئيسية
+            </a>
+        </div>
+
+        <header class="text-center mb-20" data-aos="zoom-in">
+            <h1 class="text-4xl font-black mb-4 tracking-tighter italic">سجل القادة الذهبي</h1>
+            <div class="h-1 w-20 bg-white mx-auto mb-6"></div>
+            <p class="opacity-60 text-sm">توثيق لأبرز فترات القيادة والتحولات الاستراتيجية في تاريخ القطاع</p>
+        </header>
+
+        <div class="relative px-4">
+            
+            <div class="leader-card border-yellow-500 bg-yellow-500/5" data-aos="fade-left">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-black text-yellow-500">سلطان التميمي</h2>
+                    <span class="current-tag">القائد الحالي</span>
+                </div>
+                <p class="text-sm leading-relaxed opacity-90 font-bold">
+                    تميزت الفترة الحالية بالقفزة الإلكترونية الكبرى، حيث تم تدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية التي ثبتت سيادة القطاع.
+                </p>
+                <div class="mt-4 flex gap-2">
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">تطوير إلكتروني</span>
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">عمليات احتلال</span>
+                </div>
+            </div>
+
+            <div class="leader-card" data-aos="fade-left" data-aos-delay="100">
+                <h2 class="text-2xl font-black mb-4">عبدالله الغامدي</h2>
+                <p class="text-sm leading-relaxed opacity-80 font-medium">
+                    حقبة القوة الميدانية؛ شهدت هذه الفترة تدشين مهام ميدانية نوعية والقبض على العديد من العصابات الإجرامية، مما ساهم في تعزيز استقرار المناطق الحيوية التابعة للقطاع.
+                </p>
+                <div class="mt-4 flex gap-2">
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">مكافحة عصابات</span>
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">مهام استراتيجية</span>
+                </div>
+            </div>
+
+            <div class="leader-card" data-aos="fade-left" data-aos-delay="200">
+                <h2 class="text-2xl font-black mb-4">عمار العنزي</h2>
+                <p class="text-sm leading-relaxed opacity-80 font-medium">
+                    تعتبر من أزهى فترات القطاع، حيث تم الفوز بأكثر من زيارة رسمية تقديرية وتدشين حزمة من المهام الميدانية التأسيسية التي وضعت حجر الأساس لقوة القطاع اليوم.
+                </p>
+                <div class="mt-4 flex gap-2">
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">زيارات رسمية</span>
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded">تأسيس ميداني</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest">
+            LEGACY OF HONOR • 2026
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
