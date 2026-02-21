@@ -17,65 +17,45 @@
             margin: 0;
             color: white;
         }
-        .nav-button {
-            background: #ffffff;
-            color: #000000 !important;
-            font-weight: 900;
-            padding: 15px 25px;
-            border-radius: 12px;
-            text-align: center;
-            display: block;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .sub-button {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            display: block;
-            transition: 0.3s;
-            text-decoration: none;
-        }
+        .nav-button { background: #ffffff; color: #000 !important; font-weight: 900; padding: 15px; border-radius: 12px; text-align: center; display: block; text-decoration: none; }
+        .sub-button { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 12px; text-align: center; display: block; text-decoration: none; }
         .info-card { background: white; color: black !important; padding: 30px; border-radius: 25px; margin-top: 50px; }
     </style>
 </head>
 <body class="p-6">
-    <div class="max-w-md mx-auto relative z-10 pt-10">
-        <div class="space-y-4">
+    <div class="max-w-md mx-auto pt-10">
+        <div class="space-y-4 mb-8">
             <a href="dashboard.html" class="nav-button" data-aos="fade-up">لوحة التحكم</a>
-            <a href="#" class="nav-button bg-black text-white border border-white/20" style="background: #000; color: #fff !important;">تقديم بلاغ</a>
+            <a href="#" class="nav-button bg-black text-white border border-white/20" style="background:#000; color:#fff !important;">تقديم بلاغ</a>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 mt-8">
+        <div class="grid grid-cols-2 gap-4">
             <a href="legacy.html" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in">
-                <i class="fa-solid fa-crown text-xl text-yellow-500"></i>
+                <i class="fa-solid fa-crown text-yellow-500 text-2xl"></i>
                 <span class="text-xs font-bold">سجل الشرف</span>
             </a>
             <a href="#" class="sub-button flex flex-col items-center gap-2">
-                <i class="fa-solid fa-file-lines text-xl"></i>
+                <i class="fa-solid fa-file-lines text-2xl"></i>
                 <span class="text-xs font-bold">اللائحة</span>
             </a>
             <a href="#" class="sub-button flex flex-col items-center gap-2">
-                <i class="fa-solid fa-shield-halved text-xl"></i>
+                <i class="fa-solid fa-shield-halved text-2xl"></i>
                 <span class="text-xs font-bold">أعضاء القيادة</span>
             </a>
-            <a href="achievements.html" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in">
-                <i class="fa-solid fa-medal text-xl text-blue-400"></i>
+            <a href="achievements.html" class="sub-button flex flex-col items-center gap-2">
+                <i class="fa-solid fa-medal text-2xl text-blue-400"></i>
                 <span class="text-xs font-bold">إنجازات 2026</span>
             </a>
         </div>
 
         <div class="info-card" data-aos="fade-up">
             <h2 class="text-xl font-black mb-4 italic border-r-4 border-black pr-2">تعريف قوات الامن الخاصة</h2>
-            <p class="text-sm leading-relaxed font-bold opacity-80">نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب.</p>
+            <p class="text-sm leading-relaxed font-bold opacity-80">نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام والولاء المطلق.</p>
         </div>
 
-        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest opacity-60">SYSTEM SECURED • 2026</footer>
+        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px]">SPECIAL FORCES SYSTEM • 2026</footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
