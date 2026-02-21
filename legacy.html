@@ -40,18 +40,20 @@
             position: relative;
             border-right: 4px solid #fff;
         }
-        .current { border-right-color: #ffd700; background: rgba(255, 215, 0, 0.02); }
-        .badge { 
+        /* تمييز القائد الحالي */
+        .current-leader { border-right-color: #ffd700; background: rgba(255, 215, 0, 0.02); }
+        .badge-current { 
             background: #ffd700; 
             color: black; 
-            padding: 2px 10px; 
-            border-radius: 5px; 
-            font-size: 10px; 
+            padding: 4px 12px; 
+            border-radius: 6px; 
+            font-size: 11px; 
             font-weight: 900; 
             position: absolute; 
             top: 20px; 
             right: 20px;
         }
+        
         .leader-name { font-size: 1.8rem; font-weight: 900; margin-bottom: 15px; }
         .leader-desc { opacity: 0.8; font-size: 0.95rem; line-height: 1.8; font-weight: 700; }
         .tags { display: flex; gap: 10px; margin-top: 20px; }
@@ -71,27 +73,16 @@
             <p>توثيق لأبرز فترات القيادة والتحولات الاستراتيجية</p>
         </div>
 
-        <div class="leader-card current">
-            <span class="badge">تميز ميداني</span>
-            <h2 class="leader-name text-yellow-500">ريان الغامدي</h2>
+        <div class="leader-card current-leader">
+            <span class="badge-current">القائد الحالي</span>
+            <h2 class="leader-name text-yellow-500">سلطان التميمي</h2>
             <p class="leader-desc">
-                حقبة الحزم الميداني؛ شهدت هذه الفترة قفزة نوعية في عمليات التمشيط والاحتلالات الاستراتيجية، حيث فرض سيادة القطاع بتميزه الميداني وقدرته الفائقة على إدارة العمليات المعقدة.
-            </p>
-            <div class="tags">
-                <span class="tag">تمشيطات أمنية</span>
-                <span class="tag">عمليات احتلال</span>
-                <span class="tag">تميز ميداني</span>
-            </div>
-        </div>
-
-        <div class="leader-card">
-            <h2 class="leader-name">سلطان التميمي</h2>
-            <p class="leader-desc">
-                تميزت الفترة بالقفزة الإلكترونية الكبرى، حيث تم تدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية التي ثبتت سيادة القطاع.
+                تميزت الفترة الحالية بالقفزة الإلكترونية الكبرى، حيث تم تدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية التي ثبتت سيادة القطاع.
             </p>
             <div class="tags">
                 <span class="tag">تطوير إلكتروني</span>
-                <span class="tag">معايير تقنية</span>
+                <span class="tag">عمليات احتلال</span>
+                <span class="tag">سيادة تقنية</span>
             </div>
         </div>
 
@@ -102,7 +93,7 @@
             </p>
             <div class="tags">
                 <span class="tag">مكافحة عصابات</span>
-                <span class="tag">استقرار أمني</span>
+                <span class="tag">تعزيز الاستقرار</span>
             </div>
         </div>
 
@@ -113,7 +104,19 @@
             </p>
             <div class="tags">
                 <span class="tag">زيارات رسمية</span>
-                <span class="tag">مهام تأسيسية</span>
+                <span class="tag">تأسيس الميدان</span>
+            </div>
+        </div>
+
+        <div class="leader-card">
+            <h2 class="leader-name">ريان الغامدي</h2>
+            <p class="leader-desc">
+                تميزت هذه الفترة بقفزة كبرى في عمليات التمشيط والاحتلالات الاستراتيجية، حيث برز بالتميز الميداني والقدرة على فرض السيطرة الكاملة في أصعب الظروف الميدانية.
+            </p>
+            <div class="tags">
+                <span class="tag">تمشيط ميداني</span>
+                <span class="tag">احتلالات</span>
+                <span class="tag">تميز عسكري</span>
             </div>
         </div>
 
