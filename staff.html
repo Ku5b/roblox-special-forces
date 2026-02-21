@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قيادة القوات الخاصة | S.S.F</title>
+    <title>أعضاء القيادة | S.S.F</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -11,124 +11,103 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            background: linear-gradient(to bottom, #000000 30%, #1a1a1a 60%, #ffffff 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            margin: 0;
-            color: white;
+            background: #000; 
+            color: white; 
+            padding: 20px; 
             overflow-x: hidden;
         }
-        .staff-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-right: 4px solid #ffffff;
-            padding: 20px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 15px;
+        
+        .back-btn { 
+            background: #111; padding: 10px 20px; border-radius: 10px; 
+            display: inline-flex; align-items: center; gap: 8px; 
+            text-decoration: none; color: white; margin-bottom: 25px; 
             transition: 0.3s;
         }
-        .staff-card:hover {
-            transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.1);
+
+        .staff-card { 
+            background: #0a0a0a; border: 1px solid #1a1a1a; 
+            padding: 20px; border-radius: 15px; display: flex; 
+            align-items: center; justify-content: space-between; 
+            margin-bottom: 12px; border-right: 4px solid #fff;
         }
-        /* توحيد كل النصوص باللون الأبيض */
-        h1, h2, h3, p, span, a {
-            color: #FFFFFF !important;
-        }
-        .icon-box {
-            font-size: 2rem;
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+
+        .rank-info { display: flex; align-items: center; gap: 15px; }
+        .icon-box { font-size: 1.5rem; opacity: 0.9; }
+        
+        .section-divider {
+            text-align: center; margin: 30px 0; font-weight: 900; 
+            font-size: 1.2rem; letter-spacing: 1px; opacity: 0.8;
         }
     </style>
 </head>
-<body class="p-6">
-
+<body>
     <div class="max-w-md mx-auto">
-        <div data-aos="fade-down">
-            <a href="index.html" class="mb-6 inline-block font-bold opacity-70 hover:opacity-100">❮ العودة للرئيسية</a>
-        </div>
+        <a href="index.html" class="back-btn" data-aos="fade-left">
+            <i class="fa-solid fa-arrow-right"></i> العودة
+        </a>
 
-        <h1 data-aos="zoom-in" class="text-3xl font-black text-center mb-10 border-b border-white/20 pb-4">قيادة القوات الخاصة</h1>
+        <h1 class="text-3xl font-black mb-8 italic" data-aos="fade-down">قيادة القوات الخاصة</h1>
 
-        <div class="space-y-4 mb-12">
-            <div class="staff-card" data-aos="fade-right">
-                <div class="icon-box"><i class="fa-solid fa-medal"></i></div>
-                <div class="text-left">
-                    <h2 class="text-xl font-bold">امين الجوبري </h2>
-                    <p class="opacity-60 text-sm">المشرف العام للقوات 👑</p>
-                </div>
-            </div>
-
-            <div class="staff-card" data-aos="fade-left">
-                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                <div class="text-left">
-                    <h2 class="text-xl font-bold">سلطان التميمي</h2>
-                    <p class="opacity-60 text-sm">قائد القوات 🎖️</p>
-                </div>
-            </div>
-
-            <div class="staff-card" data-aos="fade-right">
-                <div class="icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
-                <div class="text-left">
-                    <h2 class="text-xl font-bold">فراس الحربي</h2>
-                    <p class="opacity-60 text-sm font-bold">نائب قائد القوات 🎖️</p>
+        <div class="staff-card" data-aos="fade-up" data-aos-delay="100" style="border-right-color: #ffd700;">
+            <div class="rank-info">
+                <div class="icon-box text-yellow-500"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                    <h3 class="font-black text-lg">سلطان التميمي</h3>
+                    <p class="text-xs opacity-50 italic">قائد القوات 🎖️⭐</p>
                 </div>
             </div>
         </div>
 
-        <h2 data-aos="fade-up" class="text-xl font-bold mb-6 text-center opacity-70">إدارة القطاع</h2>
-        
-        <div class="space-y-4">
-            <div class="staff-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon-box"><i class="fa-solid fa-users-gear"></i></div>
-                <div class="text-left">
-                    <h2 class="text-xl font-bold">مفرح عسيري </h2>
-                    <p class="opacity-60 text-sm italic"> عضو ادارة قوات الامن الخاصة</p>
-                </div>
-            </div>
-
-            <div class="staff-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box"><i class="fa-solid fa-sitemap"></i></div>
-                <div class="text-left">
-                    <h2 class="text-xl font-bold"> نواف الرشيدي</h2>
-                    <p class="opacity-60 text-sm italic">عضو ادارة قوات الامن الخاصة </p>
-                </div>
-            </div>
-
-            <div class="staff-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box"><i class="fa-solid fa-briefcase"></i></div>
-                <div class="text-left">
-                    <h2 class="text-xl font-bold"> نواف القحطاني</h2>
-                    <p class="opacity-60 text-sm italic"> عضو ادارة قوات الامن الخاصة </p>
+        <div class="staff-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="rank-info">
+                <div class="icon-box text-white"><i class="fa-solid fa-clipboard-check"></i></div>
+                <div>
+                    <h3 class="font-black text-lg">فراس الحربي</h3>
+                    <p class="text-xs opacity-50 italic">نائب قائد القوات 🎖️⭐</p>
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-center mt-32 mb-10">
-            <img 
-                src="logo.png" 
-                alt="شعار قوات الأمن الخاصة" 
-                class="w-48 h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-                data-aos="zoom-in-up" 
-                data-aos-duration="1500"
-            >
+        <div class="section-divider" data-aos="fade-in">إدارة القطاع</div>
+
+        <div class="staff-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="rank-info">
+                <div class="icon-box text-gray-400"><i class="fa-solid fa-users-gear"></i></div>
+                <div>
+                    <h3 class="font-black text-lg">مفرح عسيري</h3>
+                    <p class="text-xs opacity-50">عضو إدارة قوات الامن الخاصة</p>
+                </div>
+            </div>
         </div>
 
-        <footer class="text-center text-black/40 mt-10 pb-10 text-xs font-bold">
-            نظام إدارة القوات الخاصة - 2026
+        <div class="staff-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="rank-info">
+                <div class="icon-box text-gray-400"><i class="fa-solid fa-sitemap"></i></div>
+                <div>
+                    <h3 class="font-black text-lg">نواف الرشيدي</h3>
+                    <p class="text-xs opacity-50">عضو إدارة قوات الامن الخاصة</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="staff-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="rank-info">
+                <div class="icon-box text-gray-400"><i class="fa-solid fa-briefcase"></i></div>
+                <div>
+                    <h3 class="font-black text-lg">نواف القحطاني</h3>
+                    <p class="text-xs opacity-50">عضو إدارة قوات الامن الخاصة</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center mt-12 pb-10 opacity-20 text-[10px] font-black tracking-widest">
+            S.S.F LEADERSHIP • 2026
         </footer>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
+        AOS.init({ duration: 800, once: true });
     </script>
 </body>
 </html>
