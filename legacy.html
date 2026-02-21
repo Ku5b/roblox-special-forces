@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
 
-        /* طبقة البياض الشفاف في الأسفل */
+        /* طبقة البياض الشفاف من الأسفل */
         body::after {
             content: "";
             position: fixed;
@@ -59,10 +59,11 @@
             margin-bottom: 25px;
             position: relative;
             border-right: 4px solid #fff;
-            transition: 0.3s;
         }
 
         .current-leader { border-right-color: #ffd700; background: rgba(255, 215, 0, 0.02); }
+        
+        /* تعديل مكان الوسام ليكون في اليسار */
         .badge-current { 
             background: #ffd700; 
             color: black; 
@@ -72,7 +73,7 @@
             font-weight: 900; 
             position: absolute; 
             top: 20px; 
-            right: 20px;
+            left: 20px; /* تم التغيير من right إلى left */
         }
         
         .leader-name { font-size: 1.8rem; font-weight: 900; margin-bottom: 15px; }
@@ -96,25 +97,25 @@
         <div class="leader-card current-leader" data-aos="fade-up">
             <span class="badge-current">القائد الحالي</span>
             <h2 class="leader-name text-yellow-500">سلطان التميمي</h2>
-            <p class="leader-desc">تميزت الفترة بالقفزة الإلكترونية الكبرى، وتدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية.</p>
+            <p class="leader-desc">تميزت الفترة الحالية بالقفزة الإلكترونية الكبرى، وتدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية.</p>
             <div class="mt-4"><span class="tag">تطوير إلكتروني</span><span class="tag">عمليات احتلال</span></div>
         </div>
 
         <div class="leader-card" data-aos="fade-up" data-aos-delay="100">
             <h2 class="leader-name">عبدالله الغامدي</h2>
             <p class="leader-desc">حقبة القوة الميدانية؛ شهدت تدشين مهام ميدانية نوعية والقبض على العصابات الإجرامية وتعزيز استقرار المناطق الحيوية.</p>
-            <div class="mt-4"><span class="tag">مكافحة عصابات</span><span class="tag">استقرار أمني</span></div>
+            <div class="mt-4"><span class="tag">مكافحة عصابات</span></div>
         </div>
 
         <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
             <h2 class="leader-name">عمار العنزي</h2>
             <p class="leader-desc">من أزهى الفترات، شهدت الفوز بزيارات رسمية وتدشين حزمة من المهام الميدانية التأسيسية لقوة القطاع.</p>
-            <div class="mt-4"><span class="tag">زيارات رسمية</span><span class="tag">تأسيس الميدان</span></div>
+            <div class="mt-4"><span class="tag">زيارات رسمية</span></div>
         </div>
 
         <div class="leader-card" data-aos="fade-up" data-aos-delay="300">
             <h2 class="leader-name">ريان الغامدي</h2>
-            <p class="leader-desc">قفزة كبرى في عمليات التمشيط والاحتلالات الاستراتيجية، والتميز في فرض السيطرة الميدانية الكاملة في أصعب الظروف.</p>
+            <p class="leader-desc">قفزة كبرى في عمليات التمشيط والاحتلالات الاستراتيجية، والتميز في فرض السيطرة الميدانية الكاملة.</p>
             <div class="mt-4"><span class="tag">تمشيط ميداني</span><span class="tag">تميز عسكري</span></div>
         </div>
 
@@ -125,11 +126,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800, // سرعة الظهور بالملي ثانية
-            once: false,   // اجعلها false إذا أردت أن يختفي ويظهر كل مرة تنزل وتطلع
-            offset: 100    // المسافة قبل ما يبدأ الأنميشن
-        });
+        AOS.init({ duration: 800, once: false });
     </script>
 
 </body>
