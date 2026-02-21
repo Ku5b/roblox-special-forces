@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سجل القادة الذهبي | S.S.F</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +15,29 @@
             color: white; 
             margin: 0; 
             padding: 20px;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
+
+        /* طبقة البياض الشفاف في الأسفل */
+        body::after {
+            content: "";
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20vh;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .container-content {
+            position: relative;
+            z-index: 10;
+            padding-bottom: 150px;
+        }
+
         .back-link { 
             background: #111; 
             padding: 12px 20px; 
@@ -27,10 +50,7 @@
             font-weight: bold; 
             margin-bottom: 30px;
         }
-        .header-section { text-align: center; margin-bottom: 50px; }
-        .header-section h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
-        .header-section p { opacity: 0.6; font-size: 0.9rem; }
-        
+
         .leader-card {
             background: #0a0a0a;
             border-radius: 20px;
@@ -39,8 +59,9 @@
             margin-bottom: 25px;
             position: relative;
             border-right: 4px solid #fff;
+            transition: 0.3s;
         }
-        /* تمييز القائد الحالي */
+
         .current-leader { border-right-color: #ffd700; background: rgba(255, 215, 0, 0.02); }
         .badge-current { 
             background: #ffd700; 
@@ -56,74 +77,60 @@
         
         .leader-name { font-size: 1.8rem; font-weight: 900; margin-bottom: 15px; }
         .leader-desc { opacity: 0.8; font-size: 0.95rem; line-height: 1.8; font-weight: 700; }
-        .tags { display: flex; gap: 10px; margin-top: 20px; }
-        .tag { background: #111; padding: 5px 12px; border-radius: 8px; font-size: 11px; font-weight: bold; color: #aaa; }
+        .tag { background: #111; padding: 5px 12px; border-radius: 8px; font-size: 11px; font-weight: bold; color: #aaa; margin-left: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="max-w-md mx-auto">
+    <div class="max-w-md mx-auto container-content">
         <a href="dashboard.html" class="back-link">
             <span>العودة للوحة التحكم</span>
             <i class="fa-solid fa-arrow-left"></i>
         </a>
 
-        <div class="header-section">
-            <h1>سجل القادة الذهبي</h1>
-            <p>توثيق لأبرز فترات القيادة والتحولات الاستراتيجية</p>
+        <div class="text-center mb-12" data-aos="fade-down">
+            <h1 class="text-4xl font-black mb-2 tracking-tighter italic">سجل القادة الذهبي</h1>
+            <p class="opacity-50 text-xs">توثيق لأبرز فترات القيادة في تاريخ القطاع</p>
         </div>
 
-        <div class="leader-card current-leader">
+        <div class="leader-card current-leader" data-aos="fade-up">
             <span class="badge-current">القائد الحالي</span>
             <h2 class="leader-name text-yellow-500">سلطان التميمي</h2>
-            <p class="leader-desc">
-                تميزت الفترة الحالية بالقفزة الإلكترونية الكبرى، حيث تم تدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية التي ثبتت سيادة القطاع.
-            </p>
-            <div class="tags">
-                <span class="tag">تطوير إلكتروني</span>
-                <span class="tag">عمليات احتلال</span>
-                <span class="tag">سيادة تقنية</span>
-            </div>
+            <p class="leader-desc">تميزت الفترة بالقفزة الإلكترونية الكبرى، وتدشين الموقع الرسمي لرفع المعايير التقنية، والانتصار في العديد من الاحتلالات الميدانية.</p>
+            <div class="mt-4"><span class="tag">تطوير إلكتروني</span><span class="tag">عمليات احتلال</span></div>
         </div>
 
-        <div class="leader-card">
+        <div class="leader-card" data-aos="fade-up" data-aos-delay="100">
             <h2 class="leader-name">عبدالله الغامدي</h2>
-            <p class="leader-desc">
-                حقبة القوة الميدانية؛ شهدت هذه الفترة تدشين مهام ميدانية نوعية والقبض على العديد من العصابات الإجرامية، مما ساهم في تعزيز استقرار المناطق الحيوية.
-            </p>
-            <div class="tags">
-                <span class="tag">مكافحة عصابات</span>
-                <span class="tag">تعزيز الاستقرار</span>
-            </div>
+            <p class="leader-desc">حقبة القوة الميدانية؛ شهدت تدشين مهام ميدانية نوعية والقبض على العصابات الإجرامية وتعزيز استقرار المناطق الحيوية.</p>
+            <div class="mt-4"><span class="tag">مكافحة عصابات</span><span class="tag">استقرار أمني</span></div>
         </div>
 
-        <div class="leader-card">
+        <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
             <h2 class="leader-name">عمار العنزي</h2>
-            <p class="leader-desc">
-                تعتبر من أزهى فترات القطاع، حيث تم الفوز بأكثر من زيارة رسمية تقديرية وتدشين حزمة من المهام الميدانية التأسيسية التي وضعت حجر الأساس لقوة القطاع.
-            </p>
-            <div class="tags">
-                <span class="tag">زيارات رسمية</span>
-                <span class="tag">تأسيس الميدان</span>
-            </div>
+            <p class="leader-desc">من أزهى الفترات، شهدت الفوز بزيارات رسمية وتدشين حزمة من المهام الميدانية التأسيسية لقوة القطاع.</p>
+            <div class="mt-4"><span class="tag">زيارات رسمية</span><span class="tag">تأسيس الميدان</span></div>
         </div>
 
-        <div class="leader-card">
+        <div class="leader-card" data-aos="fade-up" data-aos-delay="300">
             <h2 class="leader-name">ريان الغامدي</h2>
-            <p class="leader-desc">
-                تميزت هذه الفترة بقفزة كبرى في عمليات التمشيط والاحتلالات الاستراتيجية، حيث برز بالتميز الميداني والقدرة على فرض السيطرة الكاملة في أصعب الظروف الميدانية.
-            </p>
-            <div class="tags">
-                <span class="tag">تمشيط ميداني</span>
-                <span class="tag">احتلالات</span>
-                <span class="tag">تميز عسكري</span>
-            </div>
+            <p class="leader-desc">قفزة كبرى في عمليات التمشيط والاحتلالات الاستراتيجية، والتميز في فرض السيطرة الميدانية الكاملة في أصعب الظروف.</p>
+            <div class="mt-4"><span class="tag">تمشيط ميداني</span><span class="tag">تميز عسكري</span></div>
         </div>
 
-        <footer class="text-center mt-10 pb-10 opacity-20 text-[10px] font-black tracking-widest">
-            LEGACY OF HONOR • 2026
+        <footer class="text-center mt-10 opacity-30 text-[10px] font-black text-black">
+            SYSTEM SECURED • 2026
         </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // سرعة الظهور بالملي ثانية
+            once: false,   // اجعلها false إذا أردت أن يختفي ويظهر كل مرة تنزل وتطلع
+            offset: 100    // المسافة قبل ما يبدأ الأنميشن
+        });
+    </script>
 
 </body>
 </html>
