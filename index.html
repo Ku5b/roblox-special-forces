@@ -3,153 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>البوابة الرئيسية | S.S.F</title>
+    <title>البوابة الرئيسية | القوات الخاصة</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            background: linear-gradient(to bottom, #000000 50%, #1a1a1a 80%, #ffffff 100%);
+            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
+            overflow-x: hidden;
             color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
-        .container {
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            padding-top: 50px;
-        }
-
-        /* تنسيق الأزرار المستطيلة */
-        .btn-full {
-            width: 100%;
-            padding: 16px;
+        /* تنسيق الأزرار العلوية */
+        .nav-button {
+            background: #ffffff;
+            color: #000000 !important;
+            font-weight: 900;
+            padding: 15px 25px;
             border-radius: 12px;
             text-align: center;
             display: block;
-            text-decoration: none;
-            margin-bottom: 12px;
-            font-weight: 900;
             transition: 0.3s;
-        }
-
-        .btn-white { background: white; color: black; }
-        .btn-black { background: black; color: white; border: 1px solid #333; }
-        .btn-gold { 
-            background: rgba(255, 215, 0, 0.05); 
-            color: #ffd700; 
-            border: 1px solid rgba(255, 215, 0, 0.2); 
-        }
-
-        /* شبكة المربعات */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 10px;
-            margin-bottom: 30px;
-        }
-
-        .card-square {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            border-radius: 18px;
-            padding: 25px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
             text-decoration: none;
-            color: white;
         }
+        .nav-button:hover { transform: translateY(-3px); opacity: 0.9; }
 
-        /* بطاقة التعريف السفلية البيضاء */
+        .sub-button {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            display: block;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .sub-button:hover { background: rgba(255, 255, 255, 0.1); }
+
+        /* البطاقة التعريفية */
         .info-card {
             background: white;
-            color: black;
-            border-radius: 30px;
+            color: black !important;
             padding: 30px;
-            width: 100%;
-            margin-top: 20px;
+            border-radius: 25px;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        .info-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            border-right: 4px solid black;
-            padding-right: 10px;
-        }
-
-        .info-header h2 { font-weight: 900; font-size: 1.2rem; }
-        .info-card p { font-size: 0.9rem; font-weight: 700; opacity: 0.8; line-height: 1.6; }
-
-        .footer-txt {
-            font-size: 9px;
-            font-weight: 900;
-            text-align: center;
-            margin-top: 30px;
-            color: rgba(0,0,0,0.4);
-            letter-spacing: 1px;
+        .info-card h2, .info-card p { color: black !important; }
+        
+        /* الخط الأخضر المتعرج */
+        .divider-wave {
+            width: 150px;
+            margin: 40px auto;
+            opacity: 0.6;
         }
     </style>
 </head>
-<body>
+<body class="p-6">
 
-    <div class="container">
-        <a href="dashboard.html" class="btn-full btn-white">لوحة التحكم</a>
+    <div class="max-w-md mx-auto relative z-10 pt-10">
         
-        <a href="#" class="btn-full btn-black">تقديم بلاغ</a>
+        <div class="text-center mb-8 opacity-50 tracking-[0.2em] text-[10px] font-bold">
+            SAUDI SPECIAL FORCES S.S.F
+        </div>
 
-        <a href="legacy.html" class="btn-full btn-gold">
-            <i class="fa-solid fa-crown ml-2"></i> سجل الشرف
-        </a>
-
-        <div class="grid-container">
-            <a href="#" class="card-square">
-                <i class="fa-solid fa-file-lines text-xl"></i>
-                <span class="text-xs font-bold">اللائحة</span>
-            </a>
-
-            <a href="achievements.html" class="card-square">
-                <i class="fa-solid fa-medal text-blue-400 text-xl"></i>
-                <span class="text-xs font-bold">إنجازات 2026</span>
-            </a>
-
-            <a href="#" class="card-square">
-                <i class="fa-solid fa-shield-halved text-xl"></i>
-                <span class="text-xs font-bold">أعضاء القيادة</span>
+        <div class="space-y-4">
+            <a href="dashboard.html" class="nav-button" data-aos="fade-up">
+                لوحة التحكم
             </a>
             
-            <a href="#" class="card-square">
-                <i class="fa-solid fa-tower-broadcast text-xl text-green-500"></i>
-                <span class="text-xs font-bold">مركز الاتصال</span>
+            <a href="#" class="nav-button bg-black text-white border border-white/20" style="background: #000; color: #fff !important;" data-aos="fade-up" data-aos-delay="100">
+                تقديم بلاغ
             </a>
         </div>
 
-        <center><img src="https://i.imgur.com/8QG3Y8B.png" style="width:150px; opacity:0.5; margin-bottom:20px;"></center>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+            <a href="legacy.html" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fa-solid fa-crown text-xl text-yellow-500"></i>
+                <span class="text-xs font-bold">سجل الشرف</span>
+            </a>
+            <a href="#" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fa-solid fa-file-lines text-xl"></i>
+                <span class="text-xs font-bold">اللائحة</span>
+            </a>
+            <a href="#" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-solid fa-shield-halved text-xl"></i>
+                <span class="text-xs font-bold">أعضاء القيادة</span>
+            </a>
+            <a href="achievements.html" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fa-solid fa-medal text-xl text-blue-400"></i>
+                <span class="text-xs font-bold">إنجازات 2026</span>
+            </a>
+        </div>
 
-        <div class="info-card">
-            <div class="info-header">
-                <h2>تعريف قوات الامن الخاصة</h2>
+        <div class="text-center my-10" data-aos="fade-in">
+             <i class="fa-solid fa-signature text-green-500 text-4xl opacity-40"></i>
+        </div>
+
+        <div class="info-card" data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-1 h-8 bg-black"></div>
+                <h2 class="text-xl font-black italic">تعريف قوات الامن الخاصة</h2>
             </div>
-            <p>
+            <p class="text-sm leading-relaxed font-bold opacity-80">
                 نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب، والولاء المطلق للقيادة.
             </p>
         </div>
 
-        <div class="footer-txt">
+        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest opacity-60">
             SPECIAL FORCES SYSTEM • 2026
-        </div>
+        </footer>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 </body>
 </html>
