@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة قوات الأمن الخاصة</title>
+    <title>البوابة الرئيسية | القوات الخاصة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -11,79 +11,71 @@
     <style>
         body { 
             font-family: 'Cairo', sans-serif; 
-            /* رجعت لك التدرج الأبيض اللي من تحت */
-            background: linear-gradient(to bottom, #000000 30%, #1a1a1a 60%, #ffffff 100%);
+            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
-            overflow-x: hidden;
+            color: white;
         }
-        .glass-card {
-            background: rgba(20, 20, 20, 0.85);
-            backdrop-filter: blur(12px);
+        .nav-button {
+            background: #ffffff;
+            color: #000000 !important;
+            font-weight: 900;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-align: center;
+            display: block;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .sub-button {
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            display: block;
+            transition: 0.3s;
+            text-decoration: none;
         }
-        .icon-white {
-            color: #FFFFFF;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-        }
+        .info-card { background: white; color: black !important; padding: 30px; border-radius: 25px; margin-top: 50px; }
     </style>
 </head>
-<body class="p-4">
-
-    <div class="relative z-10">
-        <div class="max-w-4xl mx-auto text-center mt-12 mb-10" data-aos="fade-down">
-            <h1 class="text-4xl font-bold text-white mb-2 drop-shadow-2xl">بوابة قوات الأمن الخاصة</h1>
-            <p class="text-gray-400 font-medium italic">SAUDI SPECIAL FORCES S.S.F</p>
+<body class="p-6">
+    <div class="max-w-md mx-auto relative z-10 pt-10">
+        <div class="space-y-4">
+            <a href="dashboard.html" class="nav-button" data-aos="fade-up">لوحة التحكم</a>
+            <a href="#" class="nav-button bg-black text-white border border-white/20" style="background: #000; color: #fff !important;">تقديم بلاغ</a>
         </div>
 
-        <div class="max-w-md mx-auto space-y-4 mb-12" data-aos="zoom-in" data-aos-delay="200">
-            <a href="dashboard.html" class="block w-full bg-white text-black text-center font-bold py-4 rounded-2xl shadow-xl hover:scale-105 transition-transform">
-                لوحة التحكم
+        <div class="grid grid-cols-2 gap-4 mt-8">
+            <a href="legacy.html" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in">
+                <i class="fa-solid fa-crown text-xl text-yellow-500"></i>
+                <span class="text-xs font-bold">سجل الشرف</span>
             </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdz2ZHP75BYy0lbz0UfYAEVraHcT9MrMStKO5TGDyJspEM4RA/viewform?usp=sharing" target="_blank" class="block w-full bg-black text-white text-center font-bold py-4 rounded-2xl border border-white/20 shadow-xl hover:bg-[#1a1a1a] transition-all">
-                تقديم بلاغ
+            <a href="#" class="sub-button flex flex-col items-center gap-2">
+                <i class="fa-solid fa-file-lines text-xl"></i>
+                <span class="text-xs font-bold">اللائحة</span>
             </a>
-        </div>
-
-        <div class="grid grid-cols-2 gap-6 max-w-4xl mx-auto mb-20">
-            <a href="https://docs.google.com/spreadsheets/d/12Cjtl5pJ_KyPbqyWIc5NE4ZvdMs3twd0ovHt0pciz9A/edit?usp=drivesdk" target="_blank" 
-               class="glass-card p-10 rounded-[2rem] text-center hover:border-white/50 active:scale-95 block"
-               data-aos="fade-left" data-aos-delay="400">
-                <div class="text-5xl mb-4 icon-white">
-                    <i class="fa-solid fa-file-invoice"></i>
-                </div>
-                <div class="text-lg font-bold text-white tracking-wider">اللائحة</div>
+            <a href="#" class="sub-button flex flex-col items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-xl"></i>
+                <span class="text-xs font-bold">أعضاء القيادة</span>
             </a>
-
-            <a href="staff.html" 
-               class="glass-card p-10 rounded-[2rem] text-center hover:border-white/50 active:scale-95 block"
-               data-aos="fade-right" data-aos-delay="400">
-                <div class="text-5xl mb-4 icon-white">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <div class="text-lg font-bold text-white tracking-wider">أعضاء القيادة</div>
+            <a href="achievements.html" class="sub-button flex flex-col items-center gap-2" data-aos="zoom-in">
+                <i class="fa-solid fa-medal text-xl text-blue-400"></i>
+                <span class="text-xs font-bold">إنجازات 2026</span>
             </a>
         </div>
 
-        <div class="max-w-4xl mx-auto mt-32 bg-white/90 p-8 rounded-[2.5rem] shadow-2xl border border-gray-200 backdrop-blur-sm mb-20" data-aos="fade-up">
-            <div class="flex items-center gap-4 mb-6 border-r-4 border-black pr-4">
-                <h2 class="text-2xl font-black text-black">تعريف قوات الامن الخاصة</h2>
-            </div>
-            <p class="text-gray-800 leading-relaxed font-medium">
-                نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب، والولاء المطلق للقيادة.
-            </p>
+        <div class="info-card" data-aos="fade-up">
+            <h2 class="text-xl font-black mb-4 italic border-r-4 border-black pr-2">تعريف قوات الامن الخاصة</h2>
+            <p class="text-sm leading-relaxed font-bold opacity-80">نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب.</p>
         </div>
 
-        <footer class="text-center text-black/60 mt-10 pb-10 text-xs font-black uppercase tracking-[0.2em]">
-            Special Forces System • 2026
-        </footer>
+        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest opacity-60">SYSTEM SECURED • 2026</footer>
     </div>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-    </script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
