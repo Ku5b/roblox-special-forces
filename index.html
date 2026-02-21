@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة قوات الأمن الخاصة | S.S.F</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -18,6 +19,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
         }
 
         .container {
@@ -27,138 +29,86 @@
             padding-top: 50px;
         }
 
-        /* العنوان العلوي المطلوبة */
-        .portal-main-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        .portal-main-title { text-align: center; margin-bottom: 40px; }
         .portal-main-title h1 {
             font-size: 1.5rem;
             font-weight: 900;
             letter-spacing: 2px;
-            text-shadow: 0 0 15px rgba(255,255,255,0.2);
             border-bottom: 2px solid rgba(255,255,255,0.1);
             padding-bottom: 15px;
-            display: block;
-            width: 100%;
         }
 
-        /* الأزرار المستطيلة */
         .btn-main {
-            background: white;
-            color: black;
-            font-weight: 900;
-            padding: 18px;
-            border-radius: 15px;
-            text-align: center;
-            display: block;
-            text-decoration: none;
-            margin-bottom: 12px;
-            transition: 0.3s;
+            background: white; color: black; font-weight: 900; padding: 18px;
+            border-radius: 15px; text-align: center; display: block;
+            text-decoration: none; margin-bottom: 12px; transition: 0.3s;
         }
 
         .btn-sub {
-            background: black;
-            color: white;
-            border: 1px solid #333;
-            font-weight: 700;
-            padding: 18px;
-            border-radius: 15px;
-            text-align: center;
-            display: block;
-            text-decoration: none;
+            background: black; color: white; border: 1px solid #333;
+            font-weight: 700; padding: 18px; border-radius: 15px;
+            text-align: center; display: block; text-decoration: none;
             margin-bottom: 25px;
         }
 
-        /* شبكة المربعات */
         .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 40px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;
         }
 
         .card {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            border-radius: 20px;
-            padding: 30px 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            text-decoration: none;
-            color: white;
-            transition: 0.3s;
+            background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px;
+            padding: 30px 10px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 12px;
+            text-decoration: none; color: white; transition: 0.3s;
         }
+        .card:hover { transform: scale(1.05); background: #111; }
 
-        .card:hover { transform: translateY(-5px); background: #111; }
-        .card i { font-size: 1.8rem; }
-        .card span { font-size: 0.85rem; font-weight: 700; }
-
-        /* البطاقة البيضاء السفلية */
         .info-card {
-            background: white;
-            color: black;
-            border-radius: 35px;
-            padding: 35px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: white; color: black; border-radius: 35px;
+            padding: 35px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
         }
 
-        .info-header {
-            border-right: 5px solid black;
-            padding-right: 12px;
-            margin-bottom: 15px;
-        }
-
+        .info-header { border-right: 5px solid black; padding-right: 12px; margin-bottom: 15px; }
         .info-header h2 { font-size: 1.3rem; font-weight: 900; }
         .info-card p { font-size: 0.95rem; line-height: 1.7; font-weight: 700; opacity: 0.85; }
 
-        .footer-text {
-            margin-top: 30px;
-            padding-bottom: 20px;
-            font-size: 10px;
-            font-weight: 900;
-            color: rgba(0,0,0,0.4);
-            text-align: center;
-        }
+        .footer-text { padding-bottom: 20px; font-size: 10px; font-weight: 900; color: rgba(0,0,0,0.4); text-align: center; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="portal-main-title">
+        <div class="portal-main-title" data-aos="fade-down" data-aos-duration="1000">
             <h1>بوابة قوات الأمن الخاصة</h1>
         </div>
 
-        <a href="dashboard.html" class="btn-main">لوحة التحكم</a>
-        <a href="#" class="btn-sub">تقديم بلاغ</a>
+        <a href="dashboard.html" class="btn-main" data-aos="fade-up" data-aos-delay="200">لوحة التحكم</a>
+        <a href="#" class="btn-sub" data-aos="fade-up" data-aos-delay="400">تقديم بلاغ</a>
 
         <div class="grid-container">
-            <a href="https://docs.google.com/spreadsheets/d/12Cjtl5pJ_KyPbqyWIc5NE4ZvdMs3twd0ovHt0pciz9A/edit?usp=drivesdk" target="_blank" class="card">
-                <i class="fa-solid fa-file-lines text-white"></i>
+            <a href="https://docs.google.com/spreadsheets/d/12Cjtl5pJ_KyPbqyWIc5NE4ZvdMs3twd0ovHt0pciz9A/edit?usp=drivesdk" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="600">
+                <i class="fa-solid fa-file-lines"></i>
                 <span>اللائحة</span>
             </a>
 
-            <a href="achievements.html" class="card">
+            <a href="achievements.html" class="card" data-aos="zoom-in" data-aos-delay="700">
                 <i class="fa-solid fa-medal text-blue-400"></i>
                 <span>إنجازات 2026</span>
             </a>
 
-            <a href="staff.html" class="card">
-                <i class="fa-solid fa-shield-halved text-white"></i>
+            <a href="staff.html" class="card" data-aos="zoom-in" data-aos-delay="800">
+                <i class="fa-solid fa-shield-halved"></i>
                 <span>أعضاء القيادة</span>
             </a>
 
-            <a href="legacy.html" class="card">
+            <a href="legacy.html" class="card" data-aos="zoom-in" data-aos-delay="900">
                 <i class="fa-solid fa-crown text-yellow-500"></i>
-                <span>ابرز القادة  </span>
+                <span>سجل الشرف</span>
             </a>
         </div>
 
-        <div class="info-card">
+        <div class="info-card" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
             <div class="info-header">
                 <h2>تعريف قوات الامن الخاصة</h2>
             </div>
@@ -167,10 +117,16 @@
             </p>
         </div>
 
-        <div class="footer-text">
+        <div class="footer-text" data-aos="fade-in" data-aos-delay="1200">
             SPECIAL FORCES SYSTEM • 2026
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // يظهر التأثير مرة واحدة فقط عند الدخول أو التمرير
+        });
+    </script>
 </body>
 </html>
