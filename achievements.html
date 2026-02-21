@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنجازات القطاع 2026 | S.S.F</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background: linear-gradient(to bottom, #000000 40%, #1a1a1a 70%, rgba(255, 255, 255, 0.95) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .achievement-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 5px solid #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            transition: 0.4s;
+        }
+
+        .achievement-box:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(255,255,255,0.4);
+        }
+
+        h1, h2, h3, p, span, i, li, .back-btn {
+            color: #FFFFFF !important;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .back-btn:hover { background: #FFFFFF; color: #000000 !important; }
+        .back-btn:hover i { color: #000000 !important; }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-4xl mx-auto relative z-10">
+        
+        <div class="mb-10" data-aos="fade-down">
+            <a href="dashboard.html" class="back-btn">
+                <i class="fa-solid fa-arrow-right"></i>
+                العودة للوحة التحكم
+            </a>
+        </div>
+
+        <header class="text-center mb-16" data-aos="zoom-in">
+            <h1 class="text-4xl font-black mb-4">سجل إنجازات عام 2026</h1>
+            <div class="h-1 w-24 bg-white mx-auto rounded-full"></div>
+            <p class="mt-4 opacity-70">توثيق العمليات والنجاحات الميدانية للقطاع</p>
+        </header>
+
+        <div class="achievement-box" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-right">
+                    <h2 class="text-2xl font-black mb-2 italic">عملية "الدرع الحصين"</h2>
+                    <p class="opacity-80">نجاح عملية تأمين المنشآت الحيوية الكبرى في وقت قياسي وبدون أي ثغرات أمنية.</p>
+                </div>
+                <div class="stat-number">100%</div>
+            </div>
+        </div>
+
+        <div class="achievement-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-right">
+                    <h2 class="text-2xl font-black mb-2 italic">تطوير المنظومة التقنية</h2>
+                    <p class="opacity-80">إدخال أنظمة الذكاء الاصطناعي في الرصد الميداني مما قلص وقت الاستجابة.</p>
+                </div>
+                <div class="stat-number">2026</div>
+            </div>
+        </div>
+
+        <div class="achievement-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-right">
+                    <h2 class="text-2xl font-black mb-2 italic">كفاءة التدريب العسكري</h2>
+                    <p class="opacity-80">تخريج 3 دفعات جديدة من وحدات الاقتحام بمهارات قتالية متقدمة.</p>
+                </div>
+                <div class="stat-number">+500</div>
+            </div>
+        </div>
+
+        <footer class="text-center text-black font-black mt-20 pb-10 text-[10px] tracking-widest">
+            S.S.F ACHIEVEMENTS DIVISION • 2026
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
