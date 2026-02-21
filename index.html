@@ -24,144 +24,118 @@
             width: 100%;
             max-width: 400px;
             padding: 20px;
-            padding-top: 60px;
+            padding-top: 50px;
         }
 
-        /* الأزرار العلوية المستطيلة */
-        .btn-main {
-            background: white;
-            color: black;
+        /* تنسيق الأزرار المستطيلة */
+        .btn-full {
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            margin-bottom: 12px;
             font-weight: 900;
-            padding: 18px;
-            border-radius: 15px;
-            text-align: center;
-            display: block;
-            text-decoration: none;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
             transition: 0.3s;
         }
 
-        .btn-sub {
-            background: black;
-            color: white;
-            border: 1px solid #333;
-            font-weight: 700;
-            padding: 18px;
-            border-radius: 15px;
-            text-align: center;
-            display: block;
-            text-decoration: none;
-            margin-bottom: 30px;
-            transition: 0.3s;
+        .btn-white { background: white; color: black; }
+        .btn-black { background: black; color: white; border: 1px solid #333; }
+        .btn-gold { 
+            background: rgba(255, 215, 0, 0.05); 
+            color: #ffd700; 
+            border: 1px solid rgba(255, 215, 0, 0.2); 
         }
 
-        /* شبكة البطاقات المربعة */
+        /* شبكة المربعات */
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 40px;
+            gap: 12px;
+            margin-top: 10px;
+            margin-bottom: 30px;
         }
 
-        .card {
+        .card-square {
             background: #0a0a0a;
             border: 1px solid #1a1a1a;
-            border-radius: 20px;
-            padding: 30px 10px;
+            border-radius: 18px;
+            padding: 25px 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             color: white;
-            transition: 0.3s;
         }
 
-        .card:hover {
-            background: #151515;
-            transform: translateY(-5px);
-        }
-
-        .card i {
-            font-size: 1.8rem;
-        }
-
-        .card span {
-            font-size: 0.85rem;
-            font-weight: 700;
-        }
-
-        /* بطاقة التعريف السفلية */
+        /* بطاقة التعريف السفلية البيضاء */
         .info-card {
             background: white;
             color: black;
-            border-radius: 35px;
-            padding: 35px;
+            border-radius: 30px;
+            padding: 30px;
             width: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-top: 20px;
         }
 
         .info-header {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 15px;
-            border-right: 5px solid black;
-            padding-right: 12px;
+            margin-bottom: 10px;
+            border-right: 4px solid black;
+            padding-right: 10px;
         }
 
-        .info-header h2 {
-            font-size: 1.4rem;
+        .info-header h2 { font-weight: 900; font-size: 1.2rem; }
+        .info-card p { font-size: 0.9rem; font-weight: 700; opacity: 0.8; line-height: 1.6; }
+
+        .footer-txt {
+            font-size: 9px;
             font-weight: 900;
-        }
-
-        .info-card p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            font-weight: 700;
-            opacity: 0.85;
-        }
-
-        .footer-text {
-            margin-top: 30px;
-            padding-bottom: 20px;
-            font-size: 10px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: rgba(0,0,0,0.5);
             text-align: center;
+            margin-top: 30px;
+            color: rgba(0,0,0,0.4);
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <a href="dashboard.html" class="btn-main">لوحة التحكم</a>
-        <a href="#" class="btn-sub">تقديم بلاغ</a>
+        <a href="dashboard.html" class="btn-full btn-white">لوحة التحكم</a>
+        
+        <a href="#" class="btn-full btn-black">تقديم بلاغ</a>
+
+        <a href="legacy.html" class="btn-full btn-gold">
+            <i class="fa-solid fa-crown ml-2"></i> سجل الشرف
+        </a>
 
         <div class="grid-container">
-            <a href="legacy.html" class="card">
-                <i class="fa-solid fa-crown text-yellow-500"></i>
-                <span>سجل الشرف</span>
+            <a href="#" class="card-square">
+                <i class="fa-solid fa-file-lines text-xl"></i>
+                <span class="text-xs font-bold">اللائحة</span>
             </a>
 
-            <a href="#" class="card">
-                <i class="fa-solid fa-file-lines"></i>
-                <span>اللائحة</span>
+            <a href="achievements.html" class="card-square">
+                <i class="fa-solid fa-medal text-blue-400 text-xl"></i>
+                <span class="text-xs font-bold">إنجازات 2026</span>
             </a>
 
-            <a href="achievements.html" class="card">
-                <i class="fa-solid fa-medal text-blue-400"></i>
-                <span>إنجازات 2026</span>
+            <a href="#" class="card-square">
+                <i class="fa-solid fa-shield-halved text-xl"></i>
+                <span class="text-xs font-bold">أعضاء القيادة</span>
             </a>
-
-            <a href="#" class="card">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>أعضاء القيادة</span>
+            
+            <a href="#" class="card-square">
+                <i class="fa-solid fa-tower-broadcast text-xl text-green-500"></i>
+                <span class="text-xs font-bold">مركز الاتصال</span>
             </a>
         </div>
+
+        <center><img src="https://i.imgur.com/8QG3Y8B.png" style="width:150px; opacity:0.5; margin-bottom:20px;"></center>
 
         <div class="info-card">
             <div class="info-header">
@@ -172,7 +146,7 @@
             </p>
         </div>
 
-        <div class="footer-text">
+        <div class="footer-txt">
             SPECIAL FORCES SYSTEM • 2026
         </div>
     </div>
