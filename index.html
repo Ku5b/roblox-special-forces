@@ -61,6 +61,7 @@
             text-align: center; display: block; text-decoration: none;
             margin-bottom: 25px; transition: 0.3s;
         }
+        .btn-cert:hover { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); transform: scale(1.02); }
 
         .grid-container {
             display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;
@@ -90,7 +91,7 @@
 <body>
 
     <div class="container">
-        <div class="portal-main-title" data-aos="fade-down">
+        <div class="portal-main-title" data-aos="fade-down" data-aos-duration="1000">
             <h1>بوابة قوات الأمن الخاصة</h1>
         </div>
 
@@ -99,7 +100,7 @@
         
         <a href="#" class="btn-cert" data-aos="fade-up" data-aos-delay="300">
             <i class="fa-solid fa-certificate text-yellow-500 ml-2"></i>
-            <span>منصة شهادات القوات</span>
+            <span>بوابة شهادات القوات</span>
         </a>
 
         <div class="grid-container">
@@ -140,7 +141,10 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
     </script>
 </body>
 </html>
