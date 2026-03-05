@@ -53,7 +53,7 @@
             margin-bottom: 12px; transition: 0.3s;
         }
 
-        /* زر الشهادات بتمييز ذهبي */
+        /* زر الشهادات - تم ربطه بالرابط المطلوب */
         .btn-cert {
             background: linear-gradient(45deg, #000, #111);
             color: white; border: 1px solid #ffd700;
@@ -61,7 +61,7 @@
             text-align: center; display: block; text-decoration: none;
             margin-bottom: 25px; transition: 0.3s;
         }
-        .btn-cert:hover { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); transform: scale(1.02); }
+        .btn-cert:hover { box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); transform: scale(1.02); }
 
         .grid-container {
             display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;
@@ -91,14 +91,14 @@
 <body>
 
     <div class="container">
-        <div class="portal-main-title" data-aos="fade-down" data-aos-duration="1000">
+        <div class="portal-main-title" data-aos="fade-down">
             <h1>بوابة قوات الأمن الخاصة</h1>
         </div>
 
         <a href="dashboard.html" class="btn-main" data-aos="fade-up" data-aos-delay="100">لوحة التحكم</a>
         <a href="#" class="btn-sub" data-aos="fade-up" data-aos-delay="200">تقديم بلاغ</a>
         
-        <a href="#" class="btn-cert" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://ku5b.github.io/-/index.html" class="btn-cert" data-aos="fade-up" data-aos-delay="300">
             <i class="fa-solid fa-certificate text-yellow-500 ml-2"></i>
             <span>بوابة شهادات القوات</span>
         </a>
@@ -129,22 +129,15 @@
             <div class="info-header">
                 <h2>تعريف قوات الامن الخاصة</h2>
             </div>
-            <p>
-                نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب، والولاء المطلق للقيادة.
-            </p>
+            <p>نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب، والولاء المطلق للقيادة.</p>
         </div>
 
-        <div class="footer-text">
-            SPECIAL FORCES SYSTEM • 2026
-        </div>
+        <div class="footer-text">SYSTEM SECURED • 2026</div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
+        AOS.init({ duration: 800, once: true });
     </script>
 </body>
 </html>
