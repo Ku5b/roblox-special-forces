@@ -28,19 +28,29 @@
             width: 100%;
             max-width: 400px;
             padding: 20px;
-            padding-top: 50px;
+            padding-top: 30px;
         }
 
-        .portal-main-title { text-align: center; margin-bottom: 40px; }
+        /* تنسيق الشعار */
+        .logo-wrapper {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .main-logo {
+            width: 150px; /* يمكنك تكبير أو تصغير الشعار من هنا */
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+        }
+
+        .portal-main-title { text-align: center; margin-bottom: 35px; }
         .portal-main-title h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 900;
-            letter-spacing: 2px;
-            border-bottom: 2px solid rgba(255,255,255,0.1);
-            padding-bottom: 15px;
+            letter-spacing: 1px;
+            opacity: 0.9;
         }
 
-        /* تنسيق الأزرار */
         .btn-main {
             background: white; color: black; font-weight: 900; padding: 18px;
             border-radius: 15px; text-align: center; display: block;
@@ -54,7 +64,6 @@
             margin-bottom: 12px; transition: 0.3s;
         }
 
-        /* زر الشهادات الذهبي */
         .btn-cert {
             background: linear-gradient(45deg, #000, #111);
             color: white; border: 1px solid #ffd700;
@@ -63,7 +72,6 @@
             margin-bottom: 25px; transition: 0.3s;
         }
 
-        /* شبكة المربعات */
         .grid-container {
             display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px;
         }
@@ -74,85 +82,63 @@
             align-items: center; justify-content: center; gap: 12px;
             text-decoration: none; color: white; transition: 0.3s;
         }
-        .card:hover { transform: scale(1.05); background: #111; }
 
-        /* بطاقة التعريف البيضاء */
         .info-card {
             background: white; color: black; border-radius: 35px;
             padding: 35px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             margin-bottom: 30px;
         }
-
-        .info-header { border-right: 5px solid black; padding-right: 12px; margin-bottom: 15px; }
-        .info-header h2 { font-size: 1.3rem; font-weight: 900; }
-        .info-card p { font-size: 0.95rem; line-height: 1.7; font-weight: 700; opacity: 0.85; }
-
-        .footer-text { padding-bottom: 20px; font-size: 10px; font-weight: 900; color: rgba(0,0,0,0.4); text-align: center; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="portal-main-title" data-aos="fade-down">
+        <div class="logo-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+            <img src="logo.png" alt="S.S.F Logo" class="main-logo">
+        </div>
+
+        <div class="portal-main-title" data-aos="fade-up">
             <h1>بوابة قوات الأمن الخاصة</h1>
         </div>
 
-        <a href="dashboard.html" class="btn-main" data-aos="fade-up" data-aos-delay="100">
-            لوحة التحكم
-        </a>
-
-        <a href="#" class="btn-sub" data-aos="fade-up" data-aos-delay="200">
-            تقديم بلاغ
-        </a>
-
-        <a href="accreditation.html" class="btn-sub" data-aos="fade-up" data-aos-delay="300">
+        <a href="dashboard.html" class="btn-main" data-aos="fade-up" data-aos-delay="100">لوحة التحكم</a>
+        
+        <a href="accreditation.html" class="btn-sub" data-aos="fade-up" data-aos-delay="200">
             <i class="fa-solid fa-scroll ml-2 text-blue-400"></i>
             <span>نظام الاعتماد العسكري</span>
         </a>
         
-        <a href="https://ku5b.github.io/-/index.html" class="btn-cert" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://ku5b.github.io/-/index.html" class="btn-cert" data-aos="fade-up" data-aos-delay="300">
             <i class="fa-solid fa-certificate text-yellow-500 ml-2"></i>
             <span>بوابة شهادات القوات</span>
         </a>
 
         <div class="grid-container">
-            <a href="https://docs.google.com/spreadsheets/d/18BFOMBgPdvZDGeiDK_FdPtFx-SQvicE5I3pPFt6B_eQ/edit?usp=drivesdk" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="500">
+            <a href="https://docs.google.com/spreadsheets/d/18BFOMBgPdvZDGeiDK_FdPtFx-SQvicE5I3pPFt6B_eQ/edit?usp=drivesdk" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fa-solid fa-file-lines"></i>
                 <span>اللائحة</span>
             </a>
-
-            <a href="achievements.html" class="card" data-aos="zoom-in" data-aos-delay="600">
-                <i class="fa-solid fa-medal text-blue-400"></i>
-                <span>إنجازات 2026</span>
-            </a>
-
-            <a href="staff.html" class="card" data-aos="zoom-in" data-aos-delay="700">
+            <a href="staff.html" class="card" data-aos="zoom-in" data-aos-delay="500">
                 <i class="fa-solid fa-shield-halved"></i>
                 <span>أعضاء القيادة</span>
             </a>
-
-            <a href="legacy.html" class="card" data-aos="zoom-in" data-aos-delay="800">
-                <i class="fa-solid fa-crown text-yellow-500"></i>
-                <span>سجل الشرف</span>
-            </a>
         </div>
 
-        <div class="info-card" data-aos="fade-up" data-aos-offset="100">
-            <div class="info-header">
-                <h2>تعريف قوات الامن الخاصة</h2>
+        <div class="info-card" data-aos="fade-up">
+            <div class="border-r-4 border-black pr-2 mb-4">
+                <h2 class="text-xl font-black">تعريف القوات</h2>
             </div>
-            <p>نحن نخبة من المقاتلين مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة. نتميز بالانضباط التام، والاحترافية في التدريب، والولاء المطلق للقيادة.</p>
+            <p class="font-bold opacity-80 text-sm leading-relaxed">نخبة مكرسين لحماية الوطن، نتميز بالانضباط التام والاحترافية والولاء المطلق.</p>
         </div>
 
-        <div class="footer-text">SYSTEM SECURED • 2026</div>
+        <div class="text-center py-6 opacity-20 text-[10px] font-black tracking-widest text-black">
+            S.S.F SYSTEM • 2026
+        </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
+        AOS.init({ duration: 800, once: true });
     </script>
 </body>
 </html>
