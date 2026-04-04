@@ -53,13 +53,13 @@
         }
         .soldier-content { display: flex; align-items: center; gap: 15px; }
         
-        /* تنسيق دائرة الشعار مع خلفية بيضاء لبروز الألوان */
+        /* تنسيق دائرة الشعار مع خلفية شفافة */
         .soldier-avatar {
             width: 75px; height: 75px; border-radius: 50%;
-            border: 2px solid #ffd700; overflow: hidden; background: #fff; flex-shrink: 0;
+            border: 2px solid #ffd700; overflow: hidden; background: transparent; flex-shrink: 0;
         }
         /* استدعاء الشعار بالاسم الذي زودتني به */
-        .soldier-avatar img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
+        .soldier-avatar img { width: 100%; height: 100%; object-fit: contain; }
         
         .soldier-info .name { color: #ffd700; font-weight: 900; font-size: 1rem; }
         .soldier-info .desc { font-size: 0.8rem; opacity: 0.7; font-weight: 700; margin-top: 2px; }
@@ -136,7 +136,7 @@
 
         <div class="info-card" data-aos="fade-up">
             <h2 class="font-black text-lg mb-2">تعريف القوات</h2>
-            <p class="text-sm font-bold opacity-80">نخبة مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة.</p>
+            <p class="text-sm font-bold opacity-80">نخبة مكرسين لحماية الوطن، نتميز بالانضباط التام والاحترافية.</p>
         </div>
 
         <div class="text-center py-4 opacity-30 text-[10px] font-black text-black">
