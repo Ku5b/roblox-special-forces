@@ -1,85 +1,143 @@
-<div class="soldier-of-week-card" data-aos="fade-up">
-    <div class="soldier-badge"><i class="fa-solid fa-medal"></i> متميز الأسبوع</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة قوات الأمن الخاصة | S.S.F</title>
     
-    <div class="soldier-content">
-        <div class="soldier-avatar">
-            <img src="soldier.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/619/619153.png'">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background: linear-gradient(to bottom, #000000 50%, #1a1a1a 80%, #ffffff 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        .container { width: 100%; max-width: 400px; padding: 20px; padding-top: 30px; }
+
+        /* الشعار الرسمي */
+        .logo-wrapper { text-align: center; margin-bottom: 25px; }
+        .main-logo {
+            width: 140px;
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+        }
+
+        /* خانة عسكري الأسبوع */
+        .soldier-of-week-card {
+            background: #0a0a0a;
+            border: 1px solid #ffd700;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        .soldier-badge {
+            position: absolute; top: -10px; left: 20px;
+            background: #ffd700; color: #000; font-size: 10px;
+            font-weight: 900; padding: 4px 12px; border-radius: 10px;
+        }
+        .soldier-content { display: flex; align-items: center; gap: 15px; }
+        .soldier-avatar {
+            width: 70px; height: 70px; border-radius: 50%;
+            border: 2px solid #ffd700; overflow: hidden; background: #000;
+        }
+        .soldier-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .soldier-info .name { color: #ffd700; font-weight: 900; font-size: 1rem; }
+        .soldier-info .desc { font-size: 0.8rem; opacity: 0.7; font-weight: 700; margin-top: 2px; }
+
+        /* الأزرار الرسمية */
+        .btn-main {
+            background: white; color: black; font-weight: 900; padding: 18px;
+            border-radius: 15px; text-align: center; display: block;
+            text-decoration: none; margin-bottom: 12px; transition: 0.3s;
+        }
+        .btn-sub {
+            background: black; color: white; border: 1px solid #333;
+            font-weight: 700; padding: 18px; border-radius: 15px;
+            text-align: center; display: block; text-decoration: none;
+            margin-bottom: 12px; transition: 0.3s;
+        }
+
+        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+        .card {
+            background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px;
+            padding: 25px 10px; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 10px;
+            text-decoration: none; color: white; transition: 0.3s;
+        }
+
+        .info-card {
+            background: white; color: black; border-radius: 30px;
+            padding: 30px; width: 100%; margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-wrapper" data-aos="zoom-in">
+            <img src="1200px-Special_Security_Forces_Saudi_Arabia.svg.png" alt="S.S.F Logo" class="main-logo">
         </div>
-        <div class="soldier-info">
-            <h3 class="name">النقيب/ سلطان التميمي</h3>
-            <p class="desc">نظير الانضباط العالي والتميز الميداني</p>
-            
-            <div class="countdown-wrapper">
-                <span class="timer-label">ينتهي التميز خلال:</span>
-                <div id="countdown" class="timer-digits">00:00:00:00</div>
+
+        <div class="soldier-of-week-card" data-aos="fade-up">
+            <div class="soldier-badge"><i class="fa-solid fa-medal"></i> متميز الأسبوع</div>
+            <div class="soldier-content">
+                <div class="soldier-avatar">
+                    <img src="soldier.png" onerror="this.src='https://cdn-icons-png.flaticon.com/512/619/619153.png'">
+                </div>
+                <div class="soldier-info">
+                    <h3 class="name">النقيب/ سلطان التميمي</h3>
+                    <p class="desc">نظير الانضباط العالي والتميز الميداني</p>
+                </div>
             </div>
         </div>
+
+        <a href="dashboard.html" class="btn-main" data-aos="fade-up" data-aos-delay="100">لوحة التحكم</a>
+        
+        <a href="accreditation.html" class="btn-sub" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-scroll ml-2 text-blue-400"></i> نظام الاعتماد العسكري
+        </a>
+        
+        <a href="https://ku5b.github.io/-/index.html" class="btn-sub" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-solid fa-certificate text-yellow-500 ml-2"></i> بوابة شهادات القوات
+        </a>
+
+        <div class="grid-container">
+            <a href="https://docs.google.com/spreadsheets/d/18BFOMBgPdvZDGeiDK_FdPtFx-SQvicE5I3pPFt6B_eQ/edit?usp=drivesdk" target="_blank" class="card" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fa-solid fa-file-lines"></i> <span>اللائحة</span>
+            </a>
+            <a href="staff.html" class="card" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fa-solid fa-shield-halved text-blue-400"></i> <span>أعضاء القيادة</span>
+            </a>
+        </div>
+
+        <div class="info-card" data-aos="fade-up">
+            <h2 class="font-black text-lg mb-2">تعريف القوات</h2>
+            <p class="text-sm font-bold opacity-80">نخبة مكرسين لحماية الأمن وتنفيذ العمليات عالية الخطورة.</p>
+        </div>
+
+        <div class="text-center py-4 opacity-30 text-[10px] font-black text-black">
+            S.S.F SYSTEM • 2026
+        </div>
     </div>
-</div>
 
-<style>
-    /* تنسيق العداد */
-    .countdown-wrapper {
-        margin-top: 10px;
-        padding-top: 8px;
-        border-top: 1px solid rgba(255, 215, 0, 0.2);
-    }
-    .timer-label {
-        font-size: 0.65rem;
-        color: #ffd700;
-        font-weight: 900;
-        display: block;
-        margin-bottom: 2px;
-    }
-    .timer-digits {
-        font-family: monospace;
-        font-size: 0.9rem;
-        font-weight: 900;
-        color: white;
-        letter-spacing: 1px;
-    }
-    /* تحسينات الخانة */
-    .soldier-of-week-card {
-        background: #0a0a0a;
-        border: 1px solid #ffd700;
-        border-radius: 20px;
-        padding: 20px;
-        margin-bottom: 25px;
-        position: relative;
-    }
-    .soldier-badge {
-        position: absolute; top: -10px; left: 20px;
-        background: #ffd700; color: #000; font-size: 10px;
-        font-weight: 900; padding: 4px 12px; border-radius: 10px;
-    }
-    .soldier-content { display: flex; align-items: center; gap: 15px; }
-    .soldier-avatar {
-        width: 85px; height: 85px; border-radius: 50%;
-        border: 2px solid #ffd700; overflow: hidden; background: #000; flex-shrink: 0;
-    }
-    .soldier-info .name { color: #ffd700; font-weight: 900; font-size: 1rem; }
-    .soldier-info .desc { font-size: 0.75rem; opacity: 0.7; font-weight: 700; }
-</style>
-
-<script>
-    // سكربت العداد الزمني (ينتهي كل يوم سبت)
-    function updateCountdown() {
-        const now = new Date();
-        const nextSaturday = new Date();
-        nextSaturday.setDate(now.getDate() + (7 - now.getDay()) % 7 || 7);
-        nextSaturday.setHours(23, 59, 59, 0);
-
-        const diff = nextSaturday - now;
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const mins = Math.floor((diff / 1000 / 60) % 60);
-        const secs = Math.floor((diff / 1000) % 60);
-
-        document.getElementById("countdown").innerHTML = 
-            `${days} يوم و ${hours}:${mins}:${secs}`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
